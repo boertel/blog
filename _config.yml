@@ -1,3 +1,4 @@
 pygments: true
 auto: true
 markdown: maruku
+baseurl: /blog
