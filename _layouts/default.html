@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{% if page.title %} {{ page.title }} | {% endif %} ben.oertel</title>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/blog.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygments.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<header>
+    <a href="/">
+        <div class="cccookie-box" id="cccookie-box">
+            <!--div class="cccookie">
+                <div class="cccookie-chip small" style="top: 40%; left: 18%;"></div>
+                <div class="cccookie-chip medium" style="top: 15%; left: 30%;"></div>
+                <div class="cccookie-chip medium" style="top: 36%; left: 80%;"></div>
+                <div class="cccookie-chip medium" style="top: 43%; left: 46%;"></div>
+                <div class="cccookie-chip medium" style="top: 70%; left: 26%;"></div>
+                <div class="cccookie-chip large" style="top: 60%; left: 60%;"></div>
+                <div class="cccookie-chip small" style="top: 8%; left: 53%;"></div>
+                <div class="cccookie-chip small" style="top: 70px; left: 69%;"></div>
+                <div class="cccookie-chip small" style="top: 85%; left: 52%;"></div>
+                <div class="cccookie-chip small" style="top: 52%; left: 32%;"></div>
+            </div-->
+        </div>
+    </a>
+    <ul class="meta">
+        <li>
+            <h1><a href="/">Benjamin Oertel</a></h1>
+        </li>
+        <li>
+            <p>Practicing Aha Moment<br>and eating giant cookies</p>
+        </li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="//www.twitter.com/boertel" target="_blank">@boertel</a></li>
+        <li><a href="//www.github.com/boertel" target="_blank">Projects</a></li>
+    </ul>
+</header>
+
+<section>
+{{ content }}
+</section>
+
+<script type="text/javascript">
+(function() {
+    var pt = document.createElement('script'); pt.type = 'text/javascript'; pt.async = true;
+    pt.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'platform.twitter.com/widgets.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pt, s);
+})();
+</script>
+<script type="text/javascript" src="/js/cccookie.js"></script>
+<script type="text/javascript">
+document.getElementById('cccookie-box').appendChild(new Cccookie(300,{hover: 1.2}).bake());
+</script>
+
+<!--script type="text/javascript" charset="utf-8">
+var _ptq = _ptq || [];
+var _punchtab_settings = {
+    key: "ef256e0242a3448d8986b57e559c3cc8"
+};
+
+(function() {
+    var pt = document.createElement('script'); pt.type = 'text/javascript'; pt.async = true;
+    pt.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + '127.0.0.1:8000/static/js/pt.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pt, s);
+})();
+</script-->
+
+
+</body>
+</html>
