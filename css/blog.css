@@ -145,9 +145,10 @@ article {
     -webkit-transition-property: top, left;
 }
 .cccookie-box:hover {
-    left: -50px;
-    top: -50px;
+    left: -60px;
+    top: -75px;
 }
+
 
 @media (max-width: 760px) {
     header {
