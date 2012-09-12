@@ -19,7 +19,7 @@ a:hover {
 ul, p {
     margin-bottom: 21px;
 }
-p {
+.post p {
     text-indent: 1em;
 }
 em {
@@ -45,6 +45,13 @@ h2 {
     margin-bottom: 8px;
     text-align: left;
 }
+h3 {
+    font-size: 26px;
+}
+h4 {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
 h1 a, h1 a:hover, h2 a, h2 a:hover {
     text-decoration: none;
 }
@@ -67,7 +74,7 @@ pre {
     margin: 15px 0;
 }
 
-img {
+.post img {
     margin: 30px auto;
     display: block;
 }
@@ -161,6 +168,7 @@ article {
     }
     header .meta {
         margin: 0;
+        padding-top: 0;
     }
     header ul.meta h1 {
         max-width: 150px;
@@ -175,6 +183,76 @@ article {
     .cccookie-dough {
         z-index: 1;
     }
+}
+
+/* REWARDS */
+.user-section {
+    margin: 0 20px 20px 20px;
+    min-height: 300px;
+}
+.box {
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.footer {
+    padding: 0 20px;
+    border-top: 1px solid #e3e3e3;
+    color: #B3B3B3;
+    font-size: 14px;
+}
+.ribbon {
+    background: url(//static.punchtab.com/img/ribbon_earning_map.png) no-repeat center;
+    width: 11px;
+    height: 11px;
+    display:inline-block;
+}
+.pt-point {
+    font-weight: bold;
+}
+.chocolate-chip {
+    color: #6e4903;
+}
+.me {
+    font-size: 18px;
+    font-style: italic;
+}
+.activities {
+    min-height: 240px;
+}
+.activities li {
+    line-height: 24px;
+    height: 24px;
+}
+.activities li .date {
+    display: none;
+}
+.activities li:hover {
+    cursor: pointer;
+}
+.activities li:hover .date {
+    display: inline;
+}
+
+.reward {
+    overflow: hidden;
+    width: 400px;
+}
+.reward .text, .reward .image {
+    float: left
+}
+.reward .image {
+    width: 35%;
+}
+.reward .text {
+    text-align: center;
+}
+
+.barbe-loader, .ajax-loader {
+    background: url(../images/ajax-loader.gif) no-repeat center;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    margin: 0 auto;
 }
 
 
