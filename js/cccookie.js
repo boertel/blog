@@ -37,47 +37,31 @@
             large: this.diameter * 0.14
         };
 
+        this.css = ".cccookie-dough, .cccookie-chip, .cccookie-bite {" +
+            "-webkit-transition-duration: " + (this.options.hover * 0.25) + "s;" +
+            "-webkit-transition-timing-function: ease-out;" +
+            "-webkit-transition-property: width, height, border-radius;" +
+            "-moz-transition-duration: " + (this.options.hover * 0.25) + "s;" +
+            "-moz-transition-timing-function: ease-out;" +
+            "-moz-transition-property: width, height, border-radius;" +
+        "}";
+
         this._chips = [];
 
-        var entry = document.getElementsByTagName("script")[0];
-        entry.parentNode.insertBefore(this.css(), entry);
     };
 
-
-    Cccookie.prototype.css = function () {
-        hoverDiameter = this.diameter * this.options.hover;
-
-        var dough = ".cccookie-dough {" +
-                  "position: relative; background-color: " + this.options.doughColor + ";" +
-                  "width: " + px(this.diameter) + "; height: " + px(this.diameter) + "; border-radius: " + px(this.radius) + ";" +
-                  "}" +
-                  ".cccookie-dough:hover, .cccookie-dough:focus {" +
-                  "width: " + px(hoverDiameter) + "; height: " + px(hoverDiameter) + "; border-radius: " + px(hoverDiameter / 2) + ";" +
-                  "cursor: pointer;" +
-                  "}";
-
-        var chip = ".cccookie-chip {position: absolute; background-color: " + this.options.chipColor + ";}";
-        for (var key in this.size) {
-            var size = this.size[key],
-                sizeHover = this.size[key] * this.options.hover;
-            chip += ".cccookie-chip." + key + " { width: " + px(size) + "; height: " + px(size) + "; border-radius: " + px(size) + ";}";
-            chip += ".cccookie-dough:hover .cccookie-chip." + key + " { width: " + px(sizeHover) + "; height: " + px(sizeHover) + "; border-radius: " + px(sizeHover / 2) + "}";
-        }
-
-        var both = ".cccookie-dough, .cccookie-chip {" +
-                   "-webkit-transition-duration: " + (this.options.hover * 0.25) + "s; -webkit-transition-timing-function: ease-out; -webkit-transition-property: width, height, border-radius;" +
-                   "-moz-transition-duration: " + (this.options.hover * 0.25) + "s; -moz-transition-timing-function: ease-out; -moz-transition-property: width, height, border-radius;" +
-                   "}";
-
-        var css = dough + chip + both;
-
+    Cccookie.prototype.stylesheet = function () {
         var style = createElement("style");
         style.type = "text/css";
+
         if (style.styleSheet) {
-            style.styleSheet.cssText = css;
+            style.styleSheet.cssText = this.css;
         } else {
-            style.appendChild(document.createTextNode(css));
+            style.appendChild(document.createTextNode(this.css));
         }
+
+        var entry = document.getElementsByTagName("script")[0];
+        entry.parentNode.insertBefore(style, entry);
         return style;
     };
 
@@ -111,16 +95,6 @@
         return b;
     };
 
-    Cccookie.prototype.dough = function () {
-        var dough = createElement("div", "dough");
-        return dough;
-    };
-
-    Cccookie.prototype.chip = function (s) {
-        var chip = createElement("div", "chip " + s);
-        return chip;
-    };
-
     Cccookie.prototype.sprinkle = function (chip, sizeName) {
         var size = this.size[sizeName];
         do {
@@ -143,6 +117,84 @@
         return chip;
     };
 
+    Cccookie.prototype.dough = function () {
+        var dough = createElement("div", "dough");
+
+        var hoverDiameter = this.diameter * this.options.hover;
+
+        var doughCss = ".cccookie-dough {" +
+            "position: relative;" +
+            "overflow: hidden;" +
+            "background-color: " + this.options.doughColor + ";" +
+            "width: " + px(this.diameter) + ";" +
+            "height: " + px(this.diameter) + ";" +
+            "border-radius: " + px(this.radius) + ";" +
+            "}" +
+            ".cccookie-dough:hover, .cccookie-dough:focus {" +
+            "width: " + px(hoverDiameter) + ";" +
+            "height: " + px(hoverDiameter) + ";" +
+            "border-radius: " + px(hoverDiameter / 2) + ";" +
+            "cursor: pointer;" +
+        "}";
+
+        this.css += doughCss;
+
+        return dough;
+    };
+
+    Cccookie.prototype.chip = function (s) {
+        var chip = createElement("div", "chip " + s);
+
+        var chipCss = ".cccookie-chip {" +
+            "position: absolute;" +
+            "background-color: " + this.options.chipColor + ";" +
+        "}";
+
+        for (var key in this.size) {
+            var size = this.size[key],
+                sizeHover = this.size[key] * this.options.hover;
+
+            chipCss += ".cccookie-chip." + key + " {" +
+                "width: " + px(size) + ";" +
+                "height: " + px(size) + ";" +
+                "border-radius: " + px(size) + ";" +
+            "}";
+            chipCss += ".cccookie-dough:hover .cccookie-chip." + key + " {" +
+                "width: " + px(sizeHover) + ";" +
+                "height: " + px(sizeHover) + ";" +
+                "border-radius: " + px(sizeHover / 2) + ";" +
+            "}";
+        }
+
+        this.css += chipCss;
+
+        return chip;
+    };
+
+    Cccookie.prototype.bite = function (diameter, right, bottom) {
+        var bite = createElement("div", "bite", {
+            right: px(right),
+            bottom: px(bottom),
+        });
+
+        var hoverDiameter = diameter * this.options.hover;
+
+        this.css += ".cccookie-bite {" +
+            "position: absolute;" +
+            "background-color: #fff;" +
+            "width: " + px(diameter) + ";" +
+            "height: " + px(diameter) + ";" +
+            "border-radius: " + px(diameter / 2) + ";" +
+        "}" +
+        ".cccookie-dough:hover .cccookie-bite {" +
+            "width: " + px(hoverDiameter) + ";" +
+            "height: " + px(hoverDiameter) + ";" +
+            "border-radius: " + px(hoverDiameter / 2) + ";" +
+        "}";
+
+        return bite;
+    };
+
     Cccookie.prototype.bake = function (chips) {
         chips = chips || Math.ceil(this.diameter * 0.04);
         var dough = this.dough();
@@ -152,7 +204,28 @@
             var r = random(0, 2);
             dough.appendChild(this.sprinkle(this.chip(size[r]), size[r]));
         }
+
+        dough.appendChild(this.eat());
+
+        this.stylesheet();
         return dough;
+    };
+
+    Cccookie.prototype.eat = function () {
+        var bites = createElement('div', 'bites');
+        var cornerRadius = this.diameter * 0.2;
+
+        var coords = [
+            {right: -35, bottom: 25},
+            {right: 0, bottom: 15},
+            {right: 10, bottom: -25}
+        ];
+        for (var i = 0; i < 3; i += 1) {
+            var coord = coords[i];
+            var bite = this.bite(Math.ceil(this.diameter * 0.3), coord.right, coord.bottom, coord.bg);
+            bites.appendChild(bite);
+        }
+        return bites;
     };
 
     window.Cccookie = Cccookie;
