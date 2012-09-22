@@ -14,34 +14,26 @@
 <body>
 
 <header>
-    <a href="/">
-        <div class="cccookie-box" id="cccookie-box">
-            <!--div class="cccookie">
-                <div class="cccookie-chip small" style="top: 40%; left: 18%;"></div>
-                <div class="cccookie-chip medium" style="top: 15%; left: 30%;"></div>
-                <div class="cccookie-chip medium" style="top: 36%; left: 80%;"></div>
-                <div class="cccookie-chip medium" style="top: 43%; left: 46%;"></div>
-                <div class="cccookie-chip medium" style="top: 70%; left: 26%;"></div>
-                <div class="cccookie-chip large" style="top: 60%; left: 60%;"></div>
-                <div class="cccookie-chip small" style="top: 8%; left: 53%;"></div>
-                <div class="cccookie-chip small" style="top: 70px; left: 69%;"></div>
-                <div class="cccookie-chip small" style="top: 85%; left: 52%;"></div>
-                <div class="cccookie-chip small" style="top: 52%; left: 32%;"></div>
-            </div-->
-        </div>
-    </a>
-    <ul class="meta">
-        <li>
-            <h1><a href="/">Benjamin Oertel</a></h1>
-        </li>
-        <li>
-            <p>pratice Aha! effect<br>and eat giant cookies</p>
-        </li>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="//www.twitter.com/boertel" target="_blank">@boertel</a></li>
-        <li><a href="//www.github.com/boertel" target="_blank">Projects</a></li>
-        <li><a href="/rewards.html">Get some cookies</a></li>
-    </ul>
+    <a href="/"><div class="cccookie-box" id="cccookie-box"></div></a>
+    <div class="meta">
+        <ul class="details">
+            <li>
+                <h1><a href="/">Benjamin Oertel</a></h1>
+            </li>
+            <li>
+                <p>pratice Aha! effect<br>and eat giant cookies</p>
+            </li>
+        </ul>
+        <ul class="nav">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="//www.twitter.com/boertel" target="_blank">@boertel</a></li>
+            <li><a href="//www.github.com/boertel" target="_blank">Projects</a></li>
+            <li>
+                <span id="notification"></span>
+                <span><a href="/rewards.html">Get some cookies</a></span>
+            </li>
+        </ul>
+    </div>
 </header>
 
 <section>
@@ -61,7 +53,9 @@
 
 <script type="text/javascript">
 // Cookie
-document.getElementById('cccookie-box').appendChild(new Cccookie(300,{hover: 1.2}).bake());
+var cccookie = new Cccookie(300, {hover: 1.2});
+var cccookieElement = cccookie.bake();
+document.getElementById('cccookie-box').appendChild(cccookieElement);
 
 // dde
 dde.push({
@@ -83,7 +77,7 @@ dde.push({
         punchtab: {
             key: "ef256e0242a3448d8986b57e559c3cc8",
             domain: "127.0.0.1:8000/static",
-            debug: false
+            debug: true
         }
     }
 });
@@ -105,6 +99,19 @@ var _punchtab_settings = {
     pt.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + dde.env.settings.punchtab.domain + '/js/pt.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pt, s);
 })();
+
+window.ptReady = window.ptReady || [];
+window.ptReady.push(function () {
+
+    PT.event.bind('loyalty.earned', function (message) {
+        var notification = PT.dom.createElement('div', {}, 'cccookie-notification');
+        notification.innerHTML = (message.points >= 0 ? "+" : "-") + PT.util.intcomma(message.points);
+        cccookieElement.appendChild(notification);
+        window.setTimeout(function () {
+            cccookieElement.removeChild(notification);
+        }, 7000);
+    });
+});
 </script>
 
 

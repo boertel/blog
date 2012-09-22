@@ -12,11 +12,12 @@ a, a:visited {
     /*color: #BF6830;*/
     text-decoration: none;
 }
-a:hover {
+a:hover, a:focus {
     /*color: #FF8B40;*/
     text-decoration: underline;
+    outline: none;
 }
-ul, p {
+p {
     margin-bottom: 21px;
 }
 .post p {
@@ -38,7 +39,8 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 30px;
     line-height: 38px;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans Pro', Helvetica, sans-serif;
+    font-weight: 400;
 }
 h2 {
     font-size: 28px;
@@ -81,6 +83,23 @@ pre {
 small {
     font-size: 14px;
 }
+button {
+    background-color: #D8A33B ;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 4px 15px;
+    border: none;
+    color: #6e4903;
+}
+button:active {
+    padding-top: 5px;
+    padding-bottom: 3px;
+}
+button:hover, button:focus {
+    text-decoration: underline;
+    outline: none;
+    cursor: pointer;
+}
 
 .date {
     font-family: Monaco, 'Courier New', monospace;
@@ -118,20 +137,29 @@ header {
 }
 header .meta {
     position: relative;
+    overflow: hidden;
     padding: 25px 25px 25px 10px;
     margin-top: 180px;
 }
-header ul.meta li {
+header div.meta ul li {
     overflow: hidden;
 }
-header ul.meta h1 {
+header div.meta h1 {
     float: right;
     max-width: 200px;
 }
+header .nav {
+    position: relative;
+    max-width: 370px;
+    float: right;
+    z-index: 2;
+}
+
 section {
     margin-left: 22%;
     padding: 20px 0;
     position: relative;
+    z-index: 2;
 }
 article, nav {
     padding: 0 25px;
@@ -152,7 +180,7 @@ article {
     -webkit-transition-property: top, left;
 }
 .cccookie-box:hover {
-    left: -60px;
+    left: -85px;
     top: -75px;
 }
 
@@ -170,8 +198,12 @@ article {
         margin: 0;
         padding-top: 0;
     }
-    header ul.meta h1 {
+    header div.meta h1 {
         max-width: 150px;
+    }
+    header .nav li {
+        display: inline;
+        margin-left: 20px;
     }
     section {
         margin: 0;
@@ -187,7 +219,6 @@ article {
 
 /* REWARDS */
 .user-section {
-    margin: 0 20px 20px 20px;
     min-height: 300px;
 }
 .box {
@@ -195,7 +226,7 @@ article {
     overflow: hidden;
 }
 .footer {
-    padding: 0 20px;
+    margin: 20px 0;
     border-top: 1px solid #e3e3e3;
     color: #B3B3B3;
     font-size: 14px;
@@ -247,6 +278,11 @@ article {
     text-align: center;
 }
 
+.pt-social {
+    margin-left: 0px !important;
+    overflow: hidden !important;
+}
+
 .barbe-loader, .ajax-loader {
     background: url(../images/ajax-loader.gif) no-repeat center;
     width: 16px;
@@ -255,60 +291,10 @@ article {
     margin: 0 auto;
 }
 
-
-/* CSS COOKIE
-.cccookie, .cccookie-chip {
-    -webkit-transition-duration: .3s;
-    -webkit-transition-property: width, height, border-radius;
-    -webkit-transition-timing-function: ease-out;
-    -moz-transition-duration: .3s;
-    -moz-transition-property: width, height, border-radius;
-    -moz-transition-timing-function: ease-out;
-    transition-duration: .3s;
-    transition-property: width, height, border-radius;
-    transition-timing-function: ease-out;
-}
-.cccookie:hover {
-    width: 340px;
-    height: 340px;
-    border-radius: 170px;
-}
-
-.cccookie-chip {
+.cccookie-notification {
     position: absolute;
-    background-color: #6e4903;
+    left: 43%;
+    top: 60%;
+    font-size: 40px;
+    color: #fff;
 }
-
-.cccookie-chip.small {
-    border-radius: 10px;
-    width: 20px;
-    height: 20px; 
-}
-.cccookie:hover .cccookie-chip.small {
-    border-radius: 12px;
-    width: 24px;
-    height: 24px; 
-}
-
-.cccookie-chip.medium {
-    border-radius: 20px;
-    width: 40px;
-    height: 40px; 
-}
-.cccookie:hover .cccookie-chip.medium {
-    border-radius: 24px;
-    width: 48px;
-    height: 48px; 
-}
-
-.cccookie-chip.large {
-    border-radius: 30px;
-    width: 60px;
-    height: 60px; 
-}
-.cccookie:hover .cccookie-chip.large {
-    border-radius: 36px;
-    width: 72px;
-    height: 72px; 
-}
-*/

@@ -3,11 +3,18 @@ layout: default
 title: rewards
 ---
 
-<div class="user-section">
+<article class="user-section">
     <div id="loader" class="ajax-loader"></div>
 
     <div id="disconnected" style="display: none;">
         <h1>Get some cookies</h1>
+
+        <ol>
+            <li>Share content</li>
+            <li>Read articles</li>
+            <li>and more</li>
+            <li>to get virtual cookies.</li>
+        </ol>
 
         <button id="join">Enter the cookie stash</button>
     </div>
@@ -27,9 +34,10 @@ title: rewards
         <h4>How can you get more chocolate chips?</h4>
         <p>Read articles, share content and more (you thought I was going to tell you all the tricks?!).</p>
     </div>
-</div>
 
-<div class="footer">Custom implementation of <span class="ribbon"></span><a href="//www.punchtab.com" target="_blank">PunchTab</a> if you have questions about this program? Contact me by <a href="mailto:ben+blog@punchtab.com">email</a> | <a href="#" id="log-user">Log in</a></div>
+    <div class="footer">Powered by <span class="ribbon"></span><a href="//www.punchtab.com" target="_blank">PunchTab</a> Loyalty Program. Any questions about it? <a href="mailto:ben+blog@punchtab.com">Email</a> me | <a href="#" id="log-user">Log in</a></div>
+</article>
+
 
 
 <script id="template-reward" type="text/html" data-anchor="anchor-reward">
@@ -88,7 +96,7 @@ window.ptReady.push(function () {
     });
 
     PT.event.bind('user.updated', function () {
-        PT.dom.$('username').innerHTML = PT.user.name;
+        PT.dom.$('username').innerHTML = PT.user.name || "";
     });
    
 });
