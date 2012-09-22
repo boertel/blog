@@ -106,7 +106,9 @@ window.ptReady.push(function () {
         var notification = PT.dom.createElement('div', {}, 'cccookie-notification');
         notification.innerHTML = (message.points >= 0 ? "+" : "-") + PT.util.intcomma(message.points);
         cccookieElement.appendChild(notification);
+        cccookieElement.style.backgroundColor = cccookie.options.chipColor;
         window.setTimeout(function () {
+            cccookieElement.style.backgroundColor = cccookie.options.doughColor;
             cccookieElement.removeChild(notification);
         }, 7000);
     });
