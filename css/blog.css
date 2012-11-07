@@ -3,7 +3,7 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 23px;
     min-width: 320px;
 }
 
@@ -71,12 +71,15 @@ h3 {
 code {
     font-family: Courier, monospace;
     font-size: 15px;
+    background-color: #E9E9E9;
+    padding: 3px;
+    border-radius: 2px;
 }
 pre {
     margin: 15px 0;
 }
 
-.post img {
+.post img.media {
     margin: 30px auto;
     display: block;
 }
@@ -99,6 +102,15 @@ button:hover, button:focus {
     text-decoration: underline;
     outline: none;
     cursor: pointer;
+}
+
+li {
+    margin: 0 20px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+}    
+center {
+    margin-bottom: 20px;
 }
 
 .date {
@@ -164,8 +176,10 @@ section {
 article, nav {
     padding: 0 25px;
 }
-article {
+article, .pt-social {
     max-width: 575px;
+}
+article {
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -281,6 +295,10 @@ article {
 .pt-social {
     margin-left: 0px !important;
     overflow: hidden !important;
+}
+.pt-social div {
+    width: 33%;
+    text-align: center;
 }
 
 .barbe-loader, .ajax-loader {
