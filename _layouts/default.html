@@ -127,6 +127,15 @@ _gaq.push(['_trackPageview']);
 })();
 </script>
 
+<script type="text/javascript">
+var a = document.getElementsByTagName('a');
+for (var i = 0; i < a.length; i += 1) {
+    if (a[i].href.indexOf("http") === 0) {
+        a[i].target = "_blank";
+    }
+}
+</script>
+
 
 </body>
 </html>
