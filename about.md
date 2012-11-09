@@ -14,3 +14,7 @@ I'm Benjamin Oertel, in my early twenties. Originally from France (more precisel
 I'm a software engineer using vim, git and some weird commands on a <span style="color: #0f0; background-color: #000;font-family: monospace;">&nbsp;screen&nbsp;</span> to write code, mainly *Javascript* and *Python* and the usual annoying couple: html/css. I often practice the [Aha! effect](//en.wikipedia.org/wiki/Eureka_effect) while programming and eating giant cookies at the same time.
 
 About this blog, feel free to check out the source code on <a href="//github.com/boertel/blog" target="_blank">GitHub</a>, you can even report issues and pull requests if you want to fix/improve/criticize it.
+
+<center>
+    <img src="./images/written_in_vi.gif">
+</center>

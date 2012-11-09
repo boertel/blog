@@ -202,12 +202,7 @@ article {
 	transition: linear 0.25s;
 }
 .circle img {
-	border-radius: 50%;	/* relative value for
-				   adjustable image size */
-}
-.circle:hover {
-	transition: ease-out 0.3s;
-	transform: scale(0.8) rotate(20deg) translateZ(0);
+	border-radius: 50%;
 }
 
 
