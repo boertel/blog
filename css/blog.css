@@ -83,6 +83,7 @@ pre {
 .post img.media {
     margin: 30px auto;
     display: block;
+    width: 90%;
 }
 small {
     font-size: 14px;
@@ -138,13 +139,15 @@ header {
 
 /* LAYOUT */
 .cccookie-box {
-    height: 180px;
     position: absolute;
+    left: -114px;
+    top: -133px;
+    width: 300px;
+    height: 300px;
 }
 header {
-    width: 22%;
     position: fixed;
-    min-width: 188px;
+    min-width: 200px;
     min-height: 100%;
     border-right: 1px solid #e3e3e3;
 }
@@ -171,7 +174,7 @@ header .nav {
 }
 
 section {
-    margin-left: 22%;
+    margin-left: 230px;
     padding: 20px 0;
     position: relative;
     z-index: 2;
@@ -189,13 +192,43 @@ article {
 .post {
     margin: 20px 0;
 }
-.cccookie-box {
-    left: -114px;
-    top: -133px;
+
+.circle {
+	line-height: 0;		/* remove line-height */ 
+	display: inline-block;	/* circle wraps image */
+	margin: 5px;
+	border-radius: 50%;	/* relative value */
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.4);	
+	transition: linear 0.25s;
+}
+.circle img {
+	border-radius: 50%;	/* relative value for
+				   adjustable image size */
+}
+.circle:hover {
+	transition: ease-out 0.3s;
+	transform: scale(0.8) rotate(20deg) translateZ(0);
+}
+
+
+.desktop {
+    display: block;
+}
+span.desktop {
+    display: inline;
+}
+.mobile {
+    display: none;
 }
 
 
 @media (max-width: 760px) {
+    .desktop, span.desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
     header {
         display: block;
         position: relative;
@@ -206,21 +239,35 @@ article {
     }
     header .meta {
         margin: 0;
+        padding-bottom: 0;
         padding-top: 0;
     }
     header div.meta h1 {
         max-width: 150px;
     }
-    header .nav li {
+    header div.meta .nav li {
         display: inline;
         margin-left: 20px;
     }
+    header .meta p {
+        margin-bottom: 5px;
+    }
     section {
+        padding: 0;
         margin: 0;
     }
     article, nav {
         max-width: 575px;
         margin: 0 auto;
+    }
+    .post {
+        margin: 5px 0;
+    }
+    li {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .cccookie-box {
     }
     .cccookie-dough {
         z-index: 1;
