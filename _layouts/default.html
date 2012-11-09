@@ -51,10 +51,20 @@
 <script type="text/javascript" src="/js/dde.js"></script>
 
 <script type="text/javascript">
-// Cookie
-var cccookie = new Cccookie(300, {hover: 1.2});
-var cccookieElement = cccookie.bake();
-document.getElementById('cccookie-box').appendChild(cccookieElement);
+(function () {
+    // Cookie
+    var cccookie = new Cccookie(300, {hover: 1.2});
+    var cccookieElement = cccookie.bake();
+    document.getElementById('cccookie-box').appendChild(cccookieElement);
+
+    var as = document.getElementsByTagName('a');
+    for (var i = 0; i < as.length; i += 1) {
+        var a = as[i];
+        if (a.href.indexOf(document.location.host) === -1) {
+            a.target = "_blank";
+        }
+    }
+})();
 
 // dde
 dde.push({
@@ -126,19 +136,6 @@ _gaq.push(['_trackPageview']);
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
 </script>
-
-<script type="text/javascript">
-(function () {
-    var as = document.getElementsByTagName('a');
-    for (var i = 0; i < as.length; i += 1) {
-        var a = as[i];
-        if (a.href.indexOf(document.location.host) === -1) {
-            a.target = "_blank";
-        }
-    }
-})();
-</script>
-
 
 </body>
 </html>
