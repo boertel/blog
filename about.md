@@ -5,7 +5,7 @@ title: about
 
 <center>
     <div class="circle">
-        <img src="//www.gravatar.com/avatar/a011b6b54ec2c1852f927b7d0f26318b.png" title="I hear it was cool to have a circle avatar">
+        <img src="//www.gravatar.com/avatar/a011b6b54ec2c1852f927b7d0f26318b.png">
     </div>
 </center>
 
