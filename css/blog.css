@@ -145,13 +145,6 @@ header {
 
 
 /* LAYOUT */
-.cccookie-box {
-    position: absolute;
-    left: -114px;
-    top: -133px;
-    width: 300px;
-    height: 300px;
-}
 header {
     position: fixed;
     min-width: 200px;
@@ -260,24 +253,24 @@ span.desktop {
         margin-left: 0;
         margin-right: 0;
     }
-    .cccookie-dough {
-        z-index: 1;
-    }
 }
 
-.pt-social {
-    margin-left: 0px !important;
-    overflow: hidden !important;
-}
-.pt-social div {
-    width: 33%;
-    text-align: center;
-}
 
-.cccookie-notification {
+circle.dough {
+    fill: #D8A33B;
+}
+circle.chip {
+    fill: #6E4901;
+}
+path {
+    fill: #fff !important;
+    opacity: 0;
+}
+.cookie-box {
     position: absolute;
-    left: 43%;
-    top: 60%;
-    font-size: 40px;
-    color: #D8A33B;
+    left: -30px;
+    top: -30px;
+    width: 200px;
+    height: 200px;
 }
+
