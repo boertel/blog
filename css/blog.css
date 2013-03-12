@@ -1,9 +1,9 @@
 body {
     color: #333;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'PT Serif', serif;
     font-weight: 400;
     font-size: 16px;
-    line-height: 23px;
+    line-height: 1.5em;
     min-width: 320px;
 }
 
@@ -28,10 +28,11 @@ strong {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Vollkorn", Georgia, Serif;
-    font-weight: bold;
+    font-family: "PT Sans", sans-serif;
     font-size: 26px;
     margin-bottom: 8px;
+    text-rendering: optimizeLegibility;
+    font-weight: 300;
 }
 h1 {
     font-size: 30px;
@@ -40,16 +41,16 @@ h1 {
     font-weight: 400;
 }
 h2 {
-    font-size: 28px;
+    font-size: 36px;
     padding-top: 10px;
     margin-bottom: 8px;
     text-align: left;
-    line-height: 32px;
+    line-height: 40px;
 }
 h3 {
     margin-bottom: 8px;
-    padding-top: 8px;
-    font-size: 20px;
+    padding-top: 14px;
+    font-size: 1.5em;
 }
 h4 {
     font-size: 20px;
@@ -62,7 +63,7 @@ h1 a, h1 a:hover, h2 a, h2 a:hover {
 h1 a, h1 a:visited, h2 a, h2 a:visited {
     color: #333;
 }
-h2 a:hover {
+h1 a:hover, h2 a:hover {
     color: #3B7FD8;
 }
 
@@ -71,14 +72,11 @@ code {
     font-size: 15px;
     background-color: #E9E9E9;
     padding: 3px;
-    border-radius: 2px;
 }
 .highlight code {
     background: none;
 }
-.highlight {
-    border-radius: 5px;
-}
+
 pre {
     margin: 15px 0;
 }
@@ -117,7 +115,7 @@ button:hover, button:focus {
 li {
     margin: 5px 0;
     line-height: 25px;
-}    
+}
 center {
     margin-bottom: 20px;
 }
@@ -174,7 +172,7 @@ header .nav {
 }
 
 section {
-    margin-left: 230px;
+    margin-left: 280px;
     padding: 20px 0;
     position: relative;
     z-index: 2;
@@ -272,5 +270,14 @@ path {
     top: -30px;
     width: 200px;
     height: 200px;
+}
+
+.pt-social {
+    margin-left: 0px !important;
+    overflow: hidden !important;
+}
+.pt-social div {
+    width: 33%;
+    text-align: center;
 }
 
