@@ -144,10 +144,9 @@ header {
 
 /* LAYOUT */
 header {
-    position: fixed;
+    float: left;
     min-width: 200px;
     min-height: 100%;
-    border-right: 1px solid #e3e3e3;
 }
 header .meta {
     position: relative;
@@ -168,14 +167,13 @@ header .nav {
     position: relative;
     max-width: 370px;
     float: right;
-    z-index: 2;
 }
 
 section {
-    margin-left: 280px;
-    padding: 20px 0;
+    margin-left: 260px;
+    padding: 20px 0 20px 30px;
     position: relative;
-    z-index: 2;
+    border-left: 1px solid #e3e3e3;
 }
 article, nav {
     padding: 0 25px;
@@ -220,6 +218,7 @@ span.desktop {
         margin: 0 auto;
         max-width: 625px;
         border: none;
+        float: none;
     }
     header .meta {
         margin: 0;
