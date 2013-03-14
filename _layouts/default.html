@@ -133,9 +133,10 @@ dde.work();
 <script type="text/javascript" charset="utf-8">
 var _ptq = _ptq || [];
 var _punchtab_settings = {
-    key: dde.env.settings.punchtab.key,
     debug: dde.env.settings.punchtab.debug,
-    display: "invisible"
+    display: "invisible",
+    provider: "sso_facebook",
+    key: dde.env.settings.punchtab.key
 };
 
 (function() {
@@ -143,6 +144,21 @@ var _punchtab_settings = {
     pt.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + dde.env.settings.punchtab.domain + '/js/pt.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pt, s);
 })();
+
+window.ptReady = window.ptReady || [];
+window.ptReady.push(function () {
+    var button = PT.dom.$("connect-sso_facebook");
+
+    PT.event.bind("user.disconnected", function () {
+        PT.widget.connect.attachConnect(button);
+    });
+
+    PT.event.bind("user.connected", function () {
+        button.onclick = function () {
+            PT.event.trigger("connect.disconnect");
+        };
+    });
+});
 
 </script>
 
