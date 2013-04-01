@@ -274,10 +274,6 @@ path {
     height: 200px;
 }
 
-.pt-social {
-    margin-left: 0px !important;
-    overflow: hidden !important;
-}
 .pt-social div {
     width: 33%;
     text-align: center;
