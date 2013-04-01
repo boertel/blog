@@ -144,6 +144,7 @@ header {
 
 /* LAYOUT */
 header {
+    position: relative;
     float: left;
     min-width: 200px;
     min-height: 100%;
@@ -213,7 +214,6 @@ span.desktop {
     }
     header {
         display: block;
-        position: relative;
         width: auto;
         margin: 0 auto;
         max-width: 625px;
