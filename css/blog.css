@@ -274,7 +274,7 @@ path {
     height: 200px;
 }
 
-.pt-social div {
+article .pt-social div {
     width: 33%;
     text-align: center;
 }
