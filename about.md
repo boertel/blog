@@ -18,5 +18,3 @@ About this blog, feel free to check out the source code on <a href="//github.com
 <center>
     <img src="./images/written_in_vi.gif">
 </center>
-
-<a href="#" id="connect-sso_facebook">Connect with SSO Facebook</a>

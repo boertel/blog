@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A duck as a search engine
-published: false
+published: true
 ---
 
 Few weeks ago, I decided to say goodbye to an old virtual friend of mine: *Google Search*.
