@@ -226,7 +226,7 @@ span.desktop {
         padding-top: 0;
     }
     .cookie-box {
-        left: -60px;
+        left: -80px !important;
     }
     header div.meta h1 {
         max-width: 150px;
