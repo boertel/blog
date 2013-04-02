@@ -1,3 +1,6 @@
+body, html {
+    height: 100%;
+}
 body {
     color: #333;
     font-family: 'PT Serif', serif;
@@ -5,6 +8,8 @@ body {
     font-size: 16px;
     line-height: 1.5em;
     min-width: 320px;
+    margin: 0;
+    padding: 0;
 }
 
 a, a:visited {
@@ -172,8 +177,8 @@ header .nav {
 
 section {
     margin-left: 260px;
-    padding: 20px 0 20px 30px;
     position: relative;
+    height: 100%;
     border-left: 1px solid #e3e3e3;
 }
 article, nav {
