@@ -82,6 +82,16 @@ code {
     background: none;
 }
 
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+
 pre {
     margin: 15px 0;
 }
@@ -235,6 +245,8 @@ span.desktop {
         margin: 0;
         padding-bottom: 0;
         padding-top: 0;
+        margin-left: 115px;
+        float: right;
     }
     .cookie-box {
         left: -80px !important;

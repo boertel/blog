@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<header>
+<header class="clearfix">
     <div id="cookie-box" class="cookie-box">
     <svg id="dough" width="200" height="200">
     <circle r="100" cx="100" cy="100" class="dough" />
@@ -52,6 +52,7 @@
             <li><a href="/about.html">About</a></li>
             <li><a href="//www.twitter.com/boertel" target="_blank">@boertel</a></li>
             <li><a href="//www.github.com/boertel" target="_blank">Projects</a></li>
+            <li><a href="#" class="pt_open">Rewards</a></li>
             <!--li>
                 <span><a href="/rewards.html">Get some cookies</a></span>
             </li-->
@@ -97,6 +98,9 @@
             bites[i].style.opacity = 1;
             i -= 1;
         } else {
+            // All the cookie has been eaten:
+            console.log("PLAY");
+            _ptq.push(['play', 1]);
             i = bites.length - 1;
             for (var j = 0; j < bites.length; j += 1) {
                 bites[j].style.opacity = 0;
@@ -147,7 +151,7 @@ var _ptq = _ptq || [];
 var _punchtab_settings = {
     key: dde.env.settings.punchtab.key,
     debug: dde.env.settings.punchtab.debug,
-    display: "tab"
+    display: "inline"
 };
 
 (function() {
