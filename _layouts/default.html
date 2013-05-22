@@ -14,7 +14,7 @@
 <body>
 
 <header>
-    <div class="cookie-box">
+    <div id="cookie-box" class="cookie-box">
     <svg id="dough" width="200" height="200">
     <circle r="100" cx="100" cy="100" class="dough" />
     <circle class="chip" r="20" cx="120" cy="120" />
@@ -78,7 +78,15 @@
     // Cookie
     var bites = document.getElementsByTagName("path"),
         dough = document.getElementById("dough"),
+        box = document.getElementById("cookie-box"),
         i = bites.length - 1;
+
+    box.onmouseover = function () {
+        box.className += " unselectable";
+    };
+    box.onmouseout = function () {
+        box.className = box.className.replace(" unselectable", "");
+    };
 
     dough.onclick = function () {
         if (i >= 0) {
