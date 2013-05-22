@@ -79,7 +79,8 @@
     var bites = document.getElementsByTagName("path"),
         dough = document.getElementById("dough"),
         box = document.getElementById("cookie-box"),
-        i = bites.length - 1;
+        i = bites.length - 1,
+        sound = new Audio("/sound/cookie-crunch.ogg");
 
     box.onmouseover = function () {
         box.className += " unselectable";
@@ -89,6 +90,9 @@
     };
 
     dough.onclick = function () {
+        sound.currentTime = 0;
+        sound.play();
+
         if (i >= 0) {
             bites[i].style.opacity = 1;
             i -= 1;
@@ -127,8 +131,8 @@ dde.push({
     name: "dev",
     settings: {
         punchtab: {
-            key: "ef256e0242a3448d8986b57e559c3cc8",
-            domain: "127.0.0.1:8000/static",
+            key: "5dec4708d3854a149d91c8f4ad02f714",
+            domain: "test.punchtab.com:8000/static",
             debug: true
         }
     }
