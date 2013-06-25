@@ -146,21 +146,7 @@ dde.work();
 </script>
 
 
-<script type="text/javascript" charset="utf-8">
-var _ptq = _ptq || [];
-var _punchtab_settings = {
-    key: dde.env.settings.punchtab.key,
-    debug: dde.env.settings.punchtab.debug,
-    display: "inline"
-};
-
-(function() {
-    var pt = document.createElement('script'); pt.type = 'text/javascript'; pt.async = true;
-    pt.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + dde.env.settings.punchtab.domain + '/js/pt.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pt, s);
-})();
-
-</script>
+{% include punchtab.html %}
 
 <script type="text/javascript">
 var _gaq = _gaq || [];
