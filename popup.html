@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+
+<div id="terminal"></div>
+
+<script type="text/javascript">
+var terminal = document.getElementById("terminal");
+
+
+function createDiv(content) {
+    var div = document.createElement("div");
+    div.innerHTML = content;
+    return div;
+}
+terminal.appendChild(createDiv(window.opener));
+terminal.appendChild(createDiv(window.parent));
+</script>
+
+</body>
+</html>
