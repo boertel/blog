@@ -52,10 +52,6 @@
             <li><a href="/about.html">About</a></li>
             <li><a href="//www.twitter.com/boertel" target="_blank">@boertel</a></li>
             <li><a href="//www.github.com/boertel" target="_blank">Projects</a></li>
-            <li><a href="#" class="pt_open">Rewards</a></li>
-            <!--li>
-                <span><a href="/rewards.html">Get some cookies</a></span>
-            </li-->
         </ul>
     </div>
 </header>
@@ -71,8 +67,6 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pt, s);
 })();
 </script>
-
-<script type="text/javascript" src="/js/dde.js"></script>
 
 <script type="text/javascript">
 (function () {
@@ -116,37 +110,6 @@
         }
     }
 })();
-
-// dde
-dde.push({
-    host: "blog.oertel.fr",
-    name: "prod",
-    settings: {
-        punchtab: {
-            key: "6c64a640519389152b4546b8acc26ca8",
-            domain: "static.punchtab.com",
-            debug: false
-        }
-    }
-});
-
-dde.push({
-    host: "*",
-    name: "dev",
-    settings: {
-        punchtab: {
-            key: "5dec4708d3854a149d91c8f4ad02f714",
-            domain: "test.punchtab.com:8000/static",
-            debug: true
-        }
-    }
-});
-
-dde.work();
-</script>
-
-
-{% include punchtab.html %}
 
 <script type="text/javascript">
 var _gaq = _gaq || [];
