@@ -1,6 +1,6 @@
 ---
 layout: static
-title: about
+title: About
 ---
 
 <center>

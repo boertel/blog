@@ -213,6 +213,10 @@ section {
     height: 100%;
     border-left: 1px solid #e3e3e3;
 }
+
+aside {
+    padding: 0 20px;
+}
 article, nav {
     padding: 10px 25px;
 }
