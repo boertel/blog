@@ -1,11 +1,58 @@
-# Raspberry Pi, Bluetooth, Audio and pain
+---
+layout: post
+title: Raspberry Pi, Bluetooth, Audio and pain
+permalink: raspberry
+tags: raspberry,a2dp
+published: true
+---
+
+I bought a Raspberry Pi on January 2014 after getting a [Jambox](Jambox) (Bluetooth speaker). Even if the Jambox is convinent for travelling or using in the garden or kitchen, the sound quality is not as good as stereo speakers. This is the main reason I bought a Raspberry Pi: *to be able to stream audio from my phone or computer to my speakers* (and well, it can be fun to have a tiny computer).
+
+## Failures
+
+I spent my last 10 months trying to make this project work but without success. Using Raspbian as OS for the Raspberry Pi, I could only except to have hiccups: first the sound was making the system to freeze, then the bluetooth wasn't working, pulseaudio was complaining about dbus. Every now and then, I would give a try to a new release of Raspbian but even if there were some improvements, it was still a failure.
+
+## Success
+
+Once again, I discovered that there was a new version of Raspbian (release date: *2014-09-09*) So as usual I got my hopes up, took out the raspberry pi and ethernet cable, search for the main tutorials:  [kmonkey711](http://kmonkey711.blogspot.com/2012/12/a2dp-audio-on-raspberry-pi.html), [raspberrypi.org forum](http://www.raspberrypi.org/forums/viewtopic.php?t=68779) and [instructables]([http://www.instructables.com/id/Turn-your-Raspberry-Pi-into-a-Portable-Bluetooth-A/?ALLSTEPS). And here I was: typing commands, modifying files, rebooting, typing commands, googling errors messages, rebooting, modifying files.
+
+Every tutorial has their perks, I took the good pieces and compile into the following tutorial (and script).
+
+## Steps
+
+Install bluetooth packages:
+{% highlight sh %}
+sudo apt-get update
+{% endhighlight %}
+
+{% highlight sh %}
+sudo apt-get install bluez pulseaudio-module-bluetooth python-gobject python-gobject-2
+{% endhighlight %}
+
+Add user ```pi``` to ```lp``` group:
+{% highlight sh %}
+sudo usermod -a -G lp pi
+{% endhighlight %}
+
+Set the audio source to headphone jack (instead of HDMI by default):
+{% highlight sh %}
+amixer cset numid=3 1
+{% endhighlight %}
+
+Turn up the volume:
+{% highlight sh %}
+amixer set Master 100%
+{% endhighlight %}
 
 
-Links:
+## Script
 
-- [http://www.raspberrypi.org/forums/viewtopic.php?t=68779]()
-- [http://kmonkey711.blogspot.com/2012/12/a2dp-audio-on-raspberry-pi.html]()
-- [http://www.instructables.com/id/Turn-your-Raspberry-Pi-into-a-Portable-Bluetooth-A/?ALLSTEPS]()
-- [http://rootprompt.apatsch.net/2013/04/23/raspberry-pi-network-audio-player-pulseaudio-dlna-and-bluetooth-a2dp-part-3-bluetooth/()
+And since I'm a developer and — by nature — lazy, I create a script that does most of the job for you: [boertel/raspbian-a2dp]().
+
+
+
+Resources:
+
+- [http://rootprompt.apatsch.net/2013/04/23/raspberry-pi-network-audio-player-pulseaudio-dlna-and-bluetooth-a2dp-part-3-bluetooth/]()
 - [http://www.sarawuth.com/2013/01/raspberry-pi-as-a2dp-bluetooth-speaker/]()
 - [http://blog.mrverrall.co.uk/2013/01/raspberry-pi-a2dp-bluetooth-audio.html]()

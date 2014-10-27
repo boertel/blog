@@ -93,8 +93,6 @@
             i -= 1;
         } else {
             // All the cookie has been eaten:
-            console.log("PLAY");
-            _ptq.push(['play', 1]);
             i = bites.length - 1;
             for (var j = 0; j < bites.length; j += 1) {
                 bites[j].style.opacity = 0;
@@ -110,6 +108,7 @@
         }
     }
 })();
+</script>
 
 <script type="text/javascript">
 var _gaq = _gaq || [];
