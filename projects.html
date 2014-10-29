@@ -1,0 +1,41 @@
+---
+layout: static
+title: Projects
+---
+
+<div id="projects"></div>
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+    function populate (projects) {
+        var $projects = $('#projects');
+
+        projects.forEach(function (project) {
+            console.log(project);
+            var container = $('<div>'),
+                link = $('<a>').attr('href', 'http://' + project.homepage).attr('target', '_blank'),
+                title = $('<h3>').html(project.name),
+                description = $('<p>').html(project.description);
+
+            container.append(link.append(title))
+            container.append(description)
+
+            $projects.append(container)
+        });
+    }
+
+    $(document).ready(function () {
+        $.ajax({
+            url: 'https://api.github.com/users/boertel/repos',
+            dataType: 'jsonp',
+            success: function (response) {
+                var data = response.data,
+                    projects = data.filter(function (d) {
+                        return d.fork === false && !!d.homepage;
+                    });
+
+                populate(projects);
+            }
+        });
+    });
+</script>
