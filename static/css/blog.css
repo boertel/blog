@@ -322,8 +322,6 @@ path {
     height: 200px;
 }
 
-article .pt-social div {
-    width: 33%;
-    text-align: center;
+.vi {
+    margin-top: 1em;
 }
-
