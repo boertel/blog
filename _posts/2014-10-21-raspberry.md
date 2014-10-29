@@ -14,42 +14,20 @@ I spent my last 10 months trying to make this project work but without success. 
 
 ## Success
 
-Once again, I discovered that there was a new version of Raspbian (release date: *2014-09-09*) So as usual I got my hopes up, took out the raspberry pi and ethernet cable, search for the main tutorials:  [kmonkey711](http://kmonkey711.blogspot.com/2012/12/a2dp-audio-on-raspberry-pi.html), [raspberrypi.org forum](http://www.raspberrypi.org/forums/viewtopic.php?t=68779) and [instructables](http://www.instructables.com/id/Turn-your-Raspberry-Pi-into-a-Portable-Bluetooth-A/?ALLSTEPS). And here I was: typing commands, modifying files, rebooting, typing commands, googling error messages, rebooting, modifying files.
-
-Every tutorial has their perks, I took the good pieces and compile into the following tutorial (and script).
-
-## Steps
-
-Install bluetooth packages:
-{% highlight sh %}
-sudo apt-get update
-{% endhighlight %}
-
-{% highlight sh %}
-sudo apt-get install bluez pulseaudio-module-bluetooth python-gobject python-gobject-2
-{% endhighlight %}
-
-Add user ```pi``` to ```lp``` group:
-{% highlight sh %}
-sudo usermod -a -G lp pi
-{% endhighlight %}
-
-Set the audio source to headphone jack (instead of HDMI by default):
-{% highlight sh %}
-amixer cset numid=3 1
-{% endhighlight %}
-
-Turn up the volume:
-{% highlight sh %}
-amixer set Master 100%
-{% endhighlight %}
-
+Once again, I discovered that there was a new version of Raspbian (release date: [*2014-09-09*](http://www.raspberrypi.org/downloads/)) So as usual I got my hopes up, took out the raspberry pi and ethernet cable, search for the main tutorials:  [kmonkey711](http://kmonkey711.blogspot.com/2012/12/a2dp-audio-on-raspberry-pi.html), [raspberrypi.org forum](http://www.raspberrypi.org/forums/viewtopic.php?t=68779) and [instructables](http://www.instructables.com/id/Turn-your-Raspberry-Pi-into-a-Portable-Bluetooth-A/?ALLSTEPS). And here I was: typing commands, modifying files, rebooting, typing commands, googling error messages, rebooting, modifying files.
 
 ## Script
 
-And since I'm a developer and — by nature — lazy, I create a script that does most of the job for you: [boertel/raspbian-a2dp]().
+Every tutorial has their perks, I took the good pieces and since I'm a developer and — by nature — lazy, I compile into a script: [boertel/raspbian-a2dp]().
 
 
+## Hints
+
+Because it's sometimes not going as planned, here are few commands to help you find what's wrong.
+
+{% highlight sh %}
+/usr/bin/shared/.../list-devices
+{% endhighlight %}
 
 Resources:
 

@@ -1,3 +1,0 @@
-I planned on using [require.js](http://www.requirejs.org) for a while but I never found the right article to really get into it and I found the documentation heavy for my needs. I'm not usually a fan of video tutorial , I'm like: "I'm not going to spend 15 minutes watching a video while I could just scan an article in 2 minutes". But since I never found a good article on require.js, today was the day. I ended up watching this video: http://www.youtube.com/watch?v=VGlDR1QiV3A (8 minutes but the 5 first minutes were enough).
-
-Even if I like the asynchronous loading of files, I was more interested in the 
