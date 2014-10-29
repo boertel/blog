@@ -16,5 +16,5 @@ I'm a software engineer using vim, git and some weird commands on a <span style=
 About this blog, feel free to check out the source code on <a href="//github.com/boertel/blog" target="_blank">GitHub</a>, you can even report issues and pull requests if you want to fix/improve/criticize it.
 
 <center>
-    <img src="./images/written_in_vi.gif">
+    <img src="./static/images/written_in_vi.gif">
 </center>
