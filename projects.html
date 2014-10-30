@@ -3,22 +3,40 @@ layout: static
 title: Projects
 ---
 
+<h2>Main Projects</h2>
 <div id="projects"></div>
 
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<h2>Others Projects</h2>
+<p>Find more projects on my <a href="https://github.com/boertel" target="_blank">GitHub</a> profile.
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.3/moment.min.js"></script>
 <script>
     function populate (projects) {
         var $projects = $('#projects');
 
         projects.forEach(function (project) {
-            console.log(project);
+            project.created_at = moment(project.created_at);
+            project.pushed_at = moment(project.pushed_at);
+
             var container = $('<div>'),
-                link = $('<a>').attr('href', 'http://' + project.homepage).attr('target', '_blank'),
-                title = $('<h3>').html(project.name),
+                link = $('<a>').attr('href', project.homepage).attr('target', '_blank').html(project.name),
+                title = $('<h3>'),
+                source = $('<a>').css('float', 'right').attr('href', project.html_url).attr('target', '_blank'),
+                icon = $('<span>').addClass('octicon octicon-mark-github'),
+                datetime = $('<div>').addClass('date')
+                    .append($('<span>').html(project.created_at.format('MMMM YYYY') + ' '))
+                    .append($('<span>').html('(last updated: ' + project.pushed_at.from(moment()) + ')'));
+
                 description = $('<p>').html(project.description);
 
-            container.append(link.append(title))
+            title.append(link)
+            title.append(source.append(icon))
+            container.append(title)
             container.append(description)
+            container.append(datetime)
+
+            console.log(project);
 
             $projects.append(container)
         });

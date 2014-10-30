@@ -23,7 +23,7 @@ a:hover, a:focus {
     text-decoration: underline;
     outline: none;
 }
-p {
+p, ul {
     margin-bottom: 16px;
 }
 em {
@@ -48,6 +48,13 @@ sub {
     bottom: -0.25em;
 }
 
+blockquote {
+    margin-left: 2em;
+    padding-left: 0.5em;
+    border-left: 4px solid #E9E9E9;
+    font-style: italic;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: "PT Sans", sans-serif;
     font-size: 26px;
@@ -59,11 +66,10 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 2.5em;
     line-height: 1.2em;
-    margin-bottom: 0.6em;
 }
 h2 {
     font-size: 2em;
-    padding-top: 10px;
+    margin-top: 1em;
     margin-bottom: 0.2em;
     text-align: left;
     line-height: 40px;
@@ -78,13 +84,13 @@ h4 {
     margin-bottom: 4px;
 }
 
-h1 a, h1 a:hover, h2 a, h2 a:hover {
+a h1, a:hover h1, h2 a, h2 a:hover {
     text-decoration: none;
 }
-h1 a, h1 a:visited, h2 a, h2 a:visited {
+a h1, a:visited h1, h2 a, h2 a:visited {
     color: #333;
 }
-h1 a:hover, h2 a:hover {
+a:hover h1, h2 a:hover {
     color: #3B7FD8;
 }
 
@@ -145,6 +151,11 @@ button:hover, button:focus {
     list-style-position: inside;
     margin-left: 10px;
 }
+
+#footnotes {
+    margin-top: 4em;
+}
+
 li {
     margin: 5px 0;
     line-height: 25px;
@@ -157,14 +168,10 @@ center {
     font-family: Monaco, 'Courier New', monospace;
     font-size: 14px;
     color: #B3B3B3;
-    margin-bottom: 1em;
 }
 
 article {
     text-align: justify;
-}
-header {
-    text-align: right;
 }
 .meta p {
     color: #B3B3B3;
@@ -177,23 +184,25 @@ header {
 
 
 /* LAYOUT */
-header {
+.sidebar {
     position: relative;
     float: left;
     min-width: 200px;
+    margin-bottom: 3em;
 }
-header .meta {
+.sidebar .meta {
     position: relative;
     overflow: hidden;
     padding: 25px 25px 25px 10px;
     margin-top: 180px;
+    text-align: right;
 }
-header div.meta ul li {
+.sidebar div.meta ul li {
     overflow: hidden;
     margin: 0;
     padding: 0;
 }
-header div.meta h1 {
+.sidebar div.meta h1 {
     float: right;
     max-width: 195px;
     font-size: 30px;
@@ -202,7 +211,7 @@ header div.meta h1 {
     font-weight: 400;
     text-align: right;
 }
-header .nav {
+.sideba.sidebar .nav {
     position: relative;
     max-width: 370px;
     float: right;
@@ -213,6 +222,10 @@ section {
     position: relative;
     min-height: 100%;
     border-left: 1px solid #e3e3e3;
+}
+
+header {
+    margin-bottom: 2em;
 }
 
 aside {
@@ -261,7 +274,7 @@ span.desktop {
     .mobile {
         display: block;
     }
-    header {
+    .sidebar {
         display: block;
         width: auto;
         margin: 0 auto;
@@ -269,7 +282,7 @@ span.desktop {
         border: none;
         float: none;
     }
-    header .meta {
+    .sidebar .meta {
         margin: 0;
         padding-bottom: 0;
         padding-top: 0;
@@ -279,14 +292,14 @@ span.desktop {
     .cookie-box {
         left: -80px !important;
     }
-    header div.meta h1 {
+    .sidebar div.meta h1 {
         max-width: 150px;
     }
-    header div.meta .nav li {
+    .sidebar div.meta .nav li {
         display: inline;
         margin-left: 20px;
     }
-    header .meta p {
+    .sidebar .meta p {
         margin-bottom: 5px;
     }
     section {
