@@ -5,7 +5,7 @@ title: About
 
 <center>
     <div class="circle">
-        <img src="//s.gravatar.com/avatar/a011b6b54ec2c1852f927b7d0f26318b?s=200">
+        <img src="//s.gravatar.com/avatar/a011b6b54ec2c1852f927b7d0f26318b?s=200" width="80" height="80">
     </div>
 </center>
 
