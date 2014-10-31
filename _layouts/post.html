@@ -24,3 +24,18 @@ layout: default
 <nav>
     <a href="/" title="Back"><span class="octicon octicon-arrow-left"></span></a>
 </nav>
+
+<script>
+var sups = document.querySelectorAll('sup');
+for (var i = 0; i < sups.length; i++) {
+    sups[i].addEventListener('mouseover', function (e) {
+        var id = e.target.hash.replace('#', '');
+        document.getElementById(id).classList.add('active');
+    });
+
+    sups[i].addEventListener('mouseout', function (e) {
+        var id = e.target.hash.replace('#', '');
+        document.getElementById(id).classList.remove('active');
+    });
+}
+</script>
