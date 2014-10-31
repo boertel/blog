@@ -3,7 +3,7 @@ layout: post
 title: Raspberry Pi, Bluetooth, Audio and Pain
 permalink: raspberry
 tags: raspberry a2dp
-published: true
+published: false
 ---
 
 I bought a Raspberry Pi on January 2014 after getting a [Jambox](Jambox) (Bluetooth speaker). Even if the Jambox is convinent for travelling or using in the garden or kitchen, the sound quality is not as good as stereo speakers. This is the main reason I bought a Raspberry Pi: *to be able to stream audio from my phone or computer to my speakers* (and well, it can be fun to have a tiny computer).
