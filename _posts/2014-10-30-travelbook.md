@@ -70,7 +70,7 @@ Another new service/framework I wanted to test was [MapBox](https://www.mapbox.c
 
 And for a none-technical point of view, the temporal notion of the website allows me to relive my vacation by sorting my photos one day at a time (I was too lazy to make the whole trip at once) and also keep improving the website piece by piece.
 
-And most importantly, it's accessible to a vast majority of my friends and family (compare to my others projects).
+And most importantly, it's accessible to a vast majority of my friends and family (compare to my others projects which are more technical).
 
 
 ## What's next?
