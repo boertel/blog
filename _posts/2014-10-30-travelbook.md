@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Travelbook
+title: Process behind Travelbook
 permalink: travelbook
 tags: projects travelbook photos travel
 ---
