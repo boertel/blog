@@ -34,3 +34,4 @@ Resources:
 - [http://rootprompt.apatsch.net/2013/04/23/raspberry-pi-network-audio-player-pulseaudio-dlna-and-bluetooth-a2dp-part-3-bluetooth/]()
 - [http://www.sarawuth.com/2013/01/raspberry-pi-as-a2dp-bluetooth-speaker/]()
 - [http://blog.mrverrall.co.uk/2013/01/raspberry-pi-a2dp-bluetooth-audio.html]()
+- [http://www.debuntu.org/how-to-managing-services-with-update-rc-d/]()
