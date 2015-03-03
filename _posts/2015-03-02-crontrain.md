@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Crontab & Caltrain
-permalink: crontab
+permalink: crontrain
 tags: contrab
 ---
 
