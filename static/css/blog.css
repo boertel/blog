@@ -162,6 +162,16 @@ button:hover, button:focus {
     margin-left: 10px;
 }
 
+.cta {
+    text-align: center;
+    font-size: 1.4em;
+    margin-top: 1.4em;
+}
+.cta .octicon {
+    padding-right: 0.5em;
+    font-size: 1.2em;
+}
+
 #footnotes {
     margin-top: 4em;
 }
