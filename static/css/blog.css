@@ -127,7 +127,6 @@ code {
 
 pre {
     margin: 15px 0;
-    white-space: pre-wrap;
     text-align: left;
 }
 
@@ -167,10 +166,6 @@ button:hover, button:focus {
     margin-top: 4em;
 }
 
-.footnotes li {
-    padding: 0.5em;
-    margin-bottom: 1em;
-}
 .footnotes li p {
     margin-bottom: 0;
 }
@@ -192,6 +187,16 @@ center {
     color: #B3B3B3;
 }
 
+table {
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+thead {
+    border-bottom: 1px solid #e3e3e3;
+    font-style: italic;
+}
+
 article {
     text-align: justify;
 }
@@ -199,6 +204,10 @@ article {
     color: #B3B3B3;
 }
 
+.highlight {
+    margin-bottom: 2em;
+    overflow-y: scroll;
+}
 .highlight pre {
     padding: 10px 20px;
     line-height: 20px;
