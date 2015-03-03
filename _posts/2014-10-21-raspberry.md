@@ -37,3 +37,4 @@ Resources:
 - [http://blog.scphillips.com/2013/01/sound-configuration-on-raspberry-pi-with-alsa/]()
 - [http://raspberrypihq.com/how-to-add-wifi-to-the-raspberry-pi/]()
 - [https://learn.adafruit.com/adafruits-raspberry-pi-lesson-3-network-setup/setting-up-wifi-with-occidentalis]()
+- [http://www.debuntu.org/how-to-managing-services-with-update-rc-d/]()
