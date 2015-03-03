@@ -18,7 +18,7 @@ Once again, I discovered that there was a new version of Raspbian (release date:
 
 ## Script
 
-Every tutorial has their perks, I took the good pieces and since I'm a developer and — by nature — lazy, I compile into a script: [boertel/raspbian-a2dp]().
+Every tutorial has their perks, I took the good pieces and since I'm a developer and — by nature — lazy, I compile into a script: [boertel/raspbian-a2dp](https://www.github.com/boertel/raspian-bluetooth-audio).
 
 
 ## Hints
@@ -34,3 +34,6 @@ Resources:
 - [http://rootprompt.apatsch.net/2013/04/23/raspberry-pi-network-audio-player-pulseaudio-dlna-and-bluetooth-a2dp-part-3-bluetooth/]()
 - [http://www.sarawuth.com/2013/01/raspberry-pi-as-a2dp-bluetooth-speaker/]()
 - [http://blog.mrverrall.co.uk/2013/01/raspberry-pi-a2dp-bluetooth-audio.html]()
+- [http://blog.scphillips.com/2013/01/sound-configuration-on-raspberry-pi-with-alsa/]()
+- [http://raspberrypihq.com/how-to-add-wifi-to-the-raspberry-pi/]()
+- [https://learn.adafruit.com/adafruits-raspberry-pi-lesson-3-network-setup/setting-up-wifi-with-occidentalis]()
