@@ -53,7 +53,9 @@ And here is the result:
 
 If you are interested to use this on your computer, you can get the code on my github (being comfortable with shell is strongly recommended):
 
-[boertel/crontrain](https://github.com/boertel/crontrain)
+<div class="cta">
+    <a href="https://github.com/boertel/crontrain" target="_blank"><span class="octicon octicon-mark-github"></span>boertel/crontrain</a>
+</div>
 
 ## Next steps
 
