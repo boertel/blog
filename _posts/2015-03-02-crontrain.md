@@ -2,7 +2,7 @@
 layout: post
 title: Crontab & Caltrain
 permalink: crontrain
-tags: contrab
+tags: crontab bash caltrain
 ---
 
 I'm living in San Francisco, working in Palo Alto (40 miles away) and I'm taking the train every day to get to work (and go back home). My office is less than 10 minutes from the [Caltrain](http://www.caltrain.com/) station and there are trains every hour: 4:11pm, 5:11pm, 6:11pm.
@@ -39,10 +39,10 @@ and beside the 2 commands, the final step is to set up the ```crontab```:
 SSID="<YOUR_SSID>"
 CALTRAIN_TITLE="Caltrain Alert"
 
-55 15-18 * * 1-5     /usr/local/bin/loctify "Caltrain in 15 minutes" "$CALTRAIN_TITLE" "$SSID"
-58 15-18 * * 1-5     /usr/local/bin/loctify "SAFE to leave. Caltrain in 12 minutes" "$CALTRAIN_TITLE" "$SSID"
-00 16-19 * * 1-5     /usr/local/bin/loctify "LEAVE NOW. Caltrain in 10 minutes" "$CALTRAIN_TITLE" "$SSID"
-11 16-19 * * 1-5     /usr/local/bin/loctify "Caltrain left. Next in 1 hour" "$CALTRAIN_TITLE" "$SSID"
+55 15-18 * * 1-5     /usr/local/bin/loctify "Caltrain in 15 minutes" "$CALTRAIN_TITLE" "$SSID" > /dev/null 2>&1
+58 15-18 * * 1-5     /usr/local/bin/loctify "SAFE to leave. Caltrain in 12 minutes" "$CALTRAIN_TITLE" "$SSID" > /dev/null 2>&1
+00 16-19 * * 1-5     /usr/local/bin/loctify "LEAVE NOW. Caltrain in 10 minutes" "$CALTRAIN_TITLE" "$SSID" > /dev/null 2>&1
+11 16-19 * * 1-5     /usr/local/bin/loctify "Caltrain left. Next in 1 hour" "$CALTRAIN_TITLE" "$SSID" > /dev/null 2>&1
 {% endhighlight %}
 
 The first rule is to run the command at 15:55, 16:55, 17:55 and 18:55. The second runs at 58, etc.
