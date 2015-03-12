@@ -20,9 +20,17 @@ title: Projects
             project.pushed_at = moment(project.pushed_at);
 
             var container = $('<div>'),
-                link = $('<a>').attr('href', project.homepage).attr('target', '_blank').html(project.name),
+                link = $('<a>')
+                    .attr('href', project.homepage)
+                    .attr('title', project.name + ' - ' + project.language.toLowerCase())
+                    .attr('target', '_blank')
+                    .html(project.name),
                 title = $('<h3>'),
-                source = $('<a>').css('float', 'right').attr('href', project.html_url).attr('target', '_blank'),
+                source = $('<a>')
+                    .css('float', 'right')
+                    .attr('href', project.html_url)
+                    .attr('title', project.name + ' - ' + project.language.toLowerCase())
+                    .attr('target', '_blank'),
                 icon = $('<span>').addClass('octicon octicon-mark-github'),
                 datetime = $('<div>').addClass('date')
                     .append($('<span>').html(project.created_at.format('MMMM YYYY') + ' '))
@@ -35,8 +43,6 @@ title: Projects
             container.append(title)
             container.append(description)
             container.append(datetime)
-
-            console.log(project);
 
             $projects.append(container)
         });
