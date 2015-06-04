@@ -36,7 +36,8 @@ title: Projects
                     .append($('<span>').html(project.created_at.format('MMMM YYYY') + ' '))
                     .append($('<span>').html('(last updated: ' + project.pushed_at.from(moment()) + ')'));
 
-                description = $('<p>').html(project.description);
+            var description = project.description + (project.description[project.description.length - 1] === '.' ? '' : '.')
+            description = $('<p>').html(description);
 
             title.append(link)
             title.append(source.append(icon))
