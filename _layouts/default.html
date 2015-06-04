@@ -109,6 +109,14 @@
             a.target = "_blank";
         }
     }
+
+    if (window.location.pathname !== '/') {
+        window.onkeydown = function (e) {
+            if (e.which === 27) {
+                window.location.href = '/';
+            }
+        };
+    }
 })();
 </script>
 
