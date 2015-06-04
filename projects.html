@@ -37,6 +37,7 @@ title: Projects
                     .append($('<span>').html('(last updated: ' + project.pushed_at.from(moment()) + ')'));
 
             var description = project.description + (project.description[project.description.length - 1] === '.' ? '' : '.')
+            description[0] = description[0].toUpperCase();
             description = $('<p>').html(description);
 
             title.append(link)
