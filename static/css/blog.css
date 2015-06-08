@@ -101,7 +101,8 @@ a h1, a:hover h1, h2 a, h2 a:hover {
 a h1, a:visited h1, h2 a, h2 a:visited {
     color: #333;
 }
-a:hover h1, h2 a:hover {
+a:hover h1, h2 a:hover,
+a:focus h1, h2 a:focus {
     color: #3B7FD8;
 }
 
