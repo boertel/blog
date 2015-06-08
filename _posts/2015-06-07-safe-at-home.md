@@ -58,6 +58,7 @@ I end up using: `crankd` command line (part of [MacSysadmin/pymacadmin](https://
 Goodbye annoying login screen.
 
 If you want to use it, go check out the repository on my GitHub account:
+
 <div class="cta">
     <a href="https://github.com/boertel/safe-at-home" target="_blank"><span class="octicon octicon-mark-github"></span>boertel/safe-at-home</a>
 </div>
