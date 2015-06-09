@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Disable or delay annoying login screen
+title: Delay annoying login screen on Mac OS
 permalink: safe-at-home
 tags: bash wifi script
 ---
