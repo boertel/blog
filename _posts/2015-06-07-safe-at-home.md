@@ -1,11 +1,13 @@
 ---
 layout: post
-title: Delay annoying login screen on Mac OS
+title: Don't ask for my password when I am at home
 permalink: safe-at-home
 tags: bash wifi script
 ---
 
-I've been thinking of this idea many times, but tonight is the night where I make my idea concrete. What is annoying me is that: *I don't want to enter my password every time my computer goes to sleep when **I'm at home***.
+I've been thinking of this idea many times, but tonight is the night where I make my idea concrete. What is annoying me is that:
+
+*I don't want to enter my password every time my computer goes to sleep when **I'm at home***.
 
 I've set up  "Require password 15 minutes after sleep or screen saver begins" in the "Security & Privacy" settings just to be safe when I'm not around my computer.
 
@@ -18,13 +20,13 @@ I've already created another [script](/crontrain) that uses my SSID[^1] to deter
 {% highlight sh %}
 #!/bin/bash
 
-HOME_ENABLE=1
-OUTSIDE_ENABLE=1
+HOME_ENABLE=0           # enable password at home
+OUTSIDE_ENABLE=1        # enable password elsewhere
 
 HOME_SECONDS=900        # 15 minutes
 OUTSIDE_SECONDS=300     # 5 minutes
 
-HOME_SSID="<YOUR SSID>"
+HOME_SSID="<YOUR SSID>" # your ssid
 
 
 SSID="$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | sed -e "s/^  *SSID: //p" -e d)"
