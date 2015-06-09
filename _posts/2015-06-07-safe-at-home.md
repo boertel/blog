@@ -20,7 +20,7 @@ I've already created another [script](/crontrain) that uses my SSID[^1] to deter
 {% highlight sh %}
 #!/bin/bash
 
-HOME_ENABLE=0           # enable password at home
+HOME_ENABLE=0           # disable password at home
 OUTSIDE_ENABLE=1        # enable password elsewhere
 
 HOME_SECONDS=900        # 15 minutes
