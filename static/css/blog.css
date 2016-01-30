@@ -384,3 +384,11 @@ path {
 .vi {
     margin-top: 1em;
 }
+
+#projects > div {
+    margin-bottom: 20px;
+}
+
+#projects p {
+    margin-bottom: 6px;
+}
