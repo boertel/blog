@@ -72,11 +72,27 @@
 <script type="text/javascript">
 (function () {
     // Cookie
-    var bites = document.getElementsByTagName("path"),
+    var bites = Array.prototype.slice.call(document.getElementsByTagName("path")),
         dough = document.getElementById("dough"),
         box = document.getElementById("cookie-box"),
-        i = bites.length - 1,
+        i =  localStorage.getItem('bites') === null ? bites.length - 1 : parseInt(localStorage.getItem('bites'), 10),
         sound = new Audio("/sound/cookie-crunch.ogg");
+
+    function bite(bite) {
+        bite.style.opacity = 1;
+    }
+
+    function bake() {
+        bites.map(function(bite) {
+            bite.style.opacity = 0;
+        });
+    }
+
+    if (i < bites.length) {
+        for (var j = bites.length - 1; i < j; j -= 1) {
+            bite(bites[j]);
+        }
+    }
 
     box.onmouseover = function () {
         box.className += " unselectable";
@@ -90,15 +106,13 @@
         sound.play();
 
         if (i >= 0) {
-            bites[i].style.opacity = 1;
+            bite(bites[i]);
             i -= 1;
         } else {
-            // All the cookie has been eaten:
             i = bites.length - 1;
-            for (var j = 0; j < bites.length; j += 1) {
-                bites[j].style.opacity = 0;
-            }
+            bake();
         }
+        localStorage.setItem('bites', i);
     };
 
     var as = document.getElementsByTagName('a');
