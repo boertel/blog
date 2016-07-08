@@ -51,7 +51,7 @@ title: Projects
 
     $(document).ready(function () {
         $.ajax({
-            url: 'https://api.github.com/users/boertel/repos',
+            url: 'https://api.github.com/users/boertel/repos?per_page=50',
             dataType: 'jsonp',
             success: function (response) {
                 var data = response.data,
