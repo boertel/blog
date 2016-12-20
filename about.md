@@ -25,7 +25,7 @@ About this blog, feel free to check out the source code on <a href="//github.com
         <li><a href="https://instagram.com/boertel" target="_blank">Instagram</a></li>
         <li><a href="https://soundcloud.com/boertel" target="_blank">Soundcloud</a></li>
         <li><a href="https://linkedin.com/in/boertel" target="_blank">LinkedIn</a></li>
-        <li><a href="http://ben.oertel.fr" target="_blank">Résumé</a></li>
+        <li><a href="http://resume.oertel.fr" target="_blank">Résumé</a></li>
         <li>and for others websites, give a try to: <em>*/boertel</em></li>
     </ul>
 
