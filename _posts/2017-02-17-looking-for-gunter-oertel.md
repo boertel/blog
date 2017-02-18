@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Looking for Günter Oertel
-permalink: gunter-oertel
+permalink: looking-for-gunter-oertel
 tags: Benjamin Oertel Gunter
 ---
 
