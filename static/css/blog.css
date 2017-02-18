@@ -158,9 +158,14 @@ button:hover, button:focus {
 }
 
 .post ul {
-    list-style-type: disc;
+    list-style-type: none;
     list-style-position: inside;
     margin-left: 10px;
+}
+
+.post li:before {
+    content: '-';
+    padding-right: 0.5em
 }
 
 .cta {
