@@ -17,7 +17,7 @@ If you feel like you can help, please, contact me at: <a href="mailto:benjamin.o
 
 **Danke schön.**
 
-### <a name="update"></a>Update <small>(February 19)</small>
+### <a name="update"></a>First Update <small>(February 19)</small>
 
 This weekend, I tried to go one step further by sending messages to some *Benjamin Oertel*&nbsp;&nbsp;I could find on social networks. Here is the content of the message:
 
@@ -33,7 +33,7 @@ This weekend, I tried to go one step further by sending messages to some *Benjam
 Waiting for answers now...
 
 
-### Update <small >(5 minutes after sending bunch of Facebook messages)</small>
+### Second Update <small >(5 minutes after sending bunch of Facebook messages)</small>
 
 I **FOUND** his grandson. Here is his answer:
 
