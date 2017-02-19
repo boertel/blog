@@ -31,3 +31,12 @@ This weekend, I tried to go one step further by sending messages to some *Benjam
 > Ben
 
 Waiting for answers now...
+
+
+### Update <small>(5 minutes after sending bunch of Facebook messages)</small>
+
+I **FOUND** his grandson. Here is his answer:
+
+> Hi Ben, thanks for contacting me. Günter is my grandfather and I am already in contact with him since I was born. He got a tablet a few years ago, but still has some problems using it sometimes. Sorry for that
+
+We had a nice chat on Facebook (we actually both work in IT) and now, the plan is to forward Günter's e-mails to his grandson since I've got his e-mail address now. No more e-mails lost in the wild for Günter.
