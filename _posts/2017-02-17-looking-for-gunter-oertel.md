@@ -16,3 +16,18 @@ I'm publishing this on Internet now. Just in case somebody can help a grandfathe
 If you feel like you can help, please, contact me at: <a href="mailto:benjamin.oertel@gmail.com">benjamin.oertel@gmail.com</a>
 
 **Danke schön.**
+
+### Update <small>(February 19)</small>
+
+This weekend, I tried to go one step further by sending messages to some *Benjamin Oertel*&nbsp;&nbsp;I could find on social networks. Here is the content of the message:
+
+> Hi,
+>
+> My name is Benjamin Oertel, I'm French but living in San Francisco. I'm contacting you because for the past year, I've been receiving few emails from a grandfather named "Günter Oertel". I tried to explain to him with my broken German that I wasn't his grandson but he keeps sending my e-mails. So I decided to be on the lookout for his grandson, which I assume is also named "Benjamin Oertel" and have a similar e-mail address as mine: "benjamin.oertel@gmail.com". I'm kind of sad that his grandson doesn't received these emails and also that he is not receiving any answers from these emails.<br>
+> If by any chance, your grandfather is Günter, please reply to this message so one grandfather can finally sent e-mails to his grandson.
+>
+> Thanks,
+>
+> Ben
+
+Waiting for answers now...
