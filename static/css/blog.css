@@ -120,6 +120,7 @@ code {
 }
 .highlight code {
     background: none;
+    padding: 0px;
 }
 
 .clearfix:after {
@@ -228,7 +229,6 @@ article {
 }
 
 .highlight {
-    margin-bottom: 2em;
     overflow-y: scroll;
 }
 .highlight pre {
