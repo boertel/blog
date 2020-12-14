@@ -4,7 +4,7 @@ body, html {
 }
 body {
     color: #333;
-    font-family: "Times New Roman", serif;
+    font-family: "EB Garamond", serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.5em;
@@ -25,7 +25,7 @@ a:hover, a:focus {
 }
 p, ul {
     margin-bottom: 16px;
-    line-height: 1em;
+    line-height: 1.5em;
 }
 em {
     font-style: italic;
@@ -74,9 +74,8 @@ blockquote {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: -apple-system, sans-serif;
+    font-family: "PT Sans", sans-serif;
     font-size: 26px;
-    letter-spacing: 0.04em;
     margin-bottom: 8px;
     text-rendering: optimizeLegibility;
     font-weight: 300;
@@ -249,8 +248,7 @@ article {
 }
 .sidebar .meta {
     position: relative;
-    font-family: -apple-system, sans-serif;
-    letter-spacing: 0.02em;
+    font-family: "PT Sans", sans-serif;
     overflow: hidden;
     padding: 25px 25px 25px 10px;
     margin-top: 180px;
