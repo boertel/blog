@@ -4,7 +4,7 @@ body, html {
 }
 body {
     color: #333;
-    font-family: 'EB Garamond', serif;
+    font-family: "Times New Roman", serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.5em;
@@ -25,6 +25,7 @@ a:hover, a:focus {
 }
 p, ul {
     margin-bottom: 16px;
+    line-height: 1em;
 }
 em {
     font-style: italic;
@@ -73,8 +74,9 @@ blockquote {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "PT Sans", sans-serif;
+    font-family: -apple-system, sans-serif;
     font-size: 26px;
+    letter-spacing: 0.04em;
     margin-bottom: 8px;
     text-rendering: optimizeLegibility;
     font-weight: 300;
@@ -228,6 +230,7 @@ article {
     color: #B3B3B3;
 }
 
+
 .highlight {
     overflow-y: scroll;
 }
@@ -246,6 +249,8 @@ article {
 }
 .sidebar .meta {
     position: relative;
+    font-family: -apple-system, sans-serif;
+    letter-spacing: 0.02em;
     overflow: hidden;
     padding: 25px 25px 25px 10px;
     margin-top: 180px;
@@ -275,6 +280,7 @@ section {
     position: relative;
     min-height: 100%;
     border-left: 1px solid #e3e3e3;
+    max-width: 1280px;
 }
 
 header {
@@ -287,14 +293,10 @@ aside {
 article, nav {
     padding: 10px 25px;
 }
-article, .pt-social {
-    max-width: 575px;
-}
 article {
+    max-width: 575px;
     padding-top: 20px;
-}
-.post {
-    margin: 0 0 20px 0;
+    margin: 0 auto 20px auto;
 }
 
 .circle img {
