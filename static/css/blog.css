@@ -10,7 +10,7 @@ body, html {
 body {
     background-color: var(--bg);
     color: var(--fg);
-    font: 125%/1.5 system-ui,-apple-system,BlinkMacSystemFont, sans-serif
+    font: 125%/1.5 system-ui,-apple-system,BlinkMacSystemFont, sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.5em;
