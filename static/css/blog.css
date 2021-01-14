@@ -120,7 +120,7 @@ a:focus h1, h2 a:focus {
 code {
     font-family: Courier, monospace;
     font-size: 15px;
-    background-color: #E9E9E9;
+    background-color: var(--border);
     padding: 3px;
 }
 .highlight code {
@@ -268,7 +268,6 @@ article {
     max-width: 195px;
     font-size: 30px;
     line-height: 38px;
-    font-weight: 400;
     text-align: right;
 }
 .sideba.sidebar .nav {
