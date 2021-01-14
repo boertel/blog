@@ -2,6 +2,7 @@
     --bg: #000;
     --fg: #fff;
     --hg: #3B7FD8;
+    --border: rgba(253, 253, 253, 0.20);
 }
 body, html {
     height: 100%;
@@ -198,7 +199,7 @@ button:hover, button:focus {
     margin-bottom: 0;
 }
 .footnotes .active {
-    background-color: #E9E9E9;
+    background-color: var(--border);
 }
 
 li {
@@ -280,7 +281,7 @@ section {
     margin-left: 230px;
     position: relative;
     min-height: 100%;
-    border-left: 1px solid #e3e3e3;
+    border-left: 1px solid var(--border);
     max-width: 1280px;
 }
 
