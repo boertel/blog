@@ -1,6 +1,6 @@
 ---
 layout: post
-title: americanize
+title: Americanize
 permalink: americanize
 tags:
 ---
