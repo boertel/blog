@@ -9,15 +9,43 @@ title: Projects
 <div id="projects"></div>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.3/moment.min.js"></script>
 <script>
-    function populate (projects) {
+    function duration(seconds) {
+      let output = [];
+      let remainder = parseInt(seconds, 10);
+      const durations = [
+        // Number of seconds in
+        365 * 24 * 60 * 60, // a year
+        30 * 24 * 60 * 60,  // a month
+        24 * 60 * 60,       // a day
+        60 * 60,            // a hour
+        1 * 60,             // a minute
+      ];
+      durations.forEach((divisor, index) => {
+        const quotient = Math.abs(parseInt(`${remainder / divisor}`, 10))
+        remainder = Math.abs(remainder % divisor)
+        output.push(quotient)
+        if (index === durations.length - 1) {
+          output.push(remainder)
+        }
+      })
+      return output
+    }
+
+    const units = ['year', 'month', 'day', 'hour', 'minutes', 'seconds']
+
+    function populate(projects) {
+        console.log(projects)
         var $projects = $('#projects');
 
         projects.forEach(function (project) {
-            project.created_at = moment(project.created_at);
-            project.pushed_at = moment(project.pushed_at);
+            project.created_at = new Date(project.created_at);
+            project.pushed_at = new Date(project.pushed_at);
 
+            const d = duration((new Date() - project.pushed_at) / 1000)
+            const index = d.findIndex((value, index) => d[index] !== 0)
+
+            var options = { year: 'numeric', month: 'long', day: 'numeric' };
             var container = $('<div>'),
                 link = $('<a>')
                     .attr('href', project.homepage)
@@ -32,20 +60,24 @@ title: Projects
                     .attr('target', '_blank'),
                 icon = $('<span>').addClass('octicon octicon-mark-github'),
                 datetime = $('<div>').addClass('date')
-                    .append($('<span>').html(project.created_at.format('MMMM YYYY') + ' '))
-                    .append($('<span>').html('(last updated: ' + project.pushed_at.from(moment()) + ')'));
+                    .append($('<span>').html(new Intl.DateTimeFormat('default', options).format(project.created_at) + ' '))
+                    .append($('<span>').html(`(last updated: ${d[index]} ${d[index] === 1 ? units[index] : `${units[index]}s`} ago)`))
 
-            var description = project.description + (project.description[project.description.length - 1] === '.' ? '' : '.')
-            description[0] = description[0].toUpperCase();
-            description = $('<p>').html(description);
+            try {
+                var description = project.description
+                description[0] = description[0].toUpperCase();
+                description = $('<p>').html(description);
 
-            title.append(link)
-            title.append(source.append(icon))
-            container.append(title)
-            container.append(description)
-            container.append(datetime)
+                title.append(link)
+                title.append(source.append(icon))
+                container.append(title)
+                container.append(description)
+                container.append(datetime)
 
-            $projects.append(container)
+                $projects.append(container)
+            } catch {
+                console.warn(`failed to handle ${project.name}`)
+            }
         });
     }
 

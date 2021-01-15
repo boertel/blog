@@ -391,7 +391,7 @@ circle.chip {
     fill: #6E4901;
 }
 path {
-    fill: #fff !important;
+    fill: var(--bg) !important;
     opacity: 0;
 }
 .cookie-box {
