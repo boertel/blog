@@ -1,7 +1,7 @@
 :root {
     --bg: #000;
     --fg: #fff;
-    --hg: #3B7FD8;
+    --hg: #DEAD31;
     --border: rgba(253, 253, 253, 0.20);
     --sans-font: system-ui,-apple-system,BlinkMacSystemFont, sans-serif;
 }
@@ -40,6 +40,11 @@ a:hover, a:focus {
 p, ul {
     margin-bottom: 16px;
     line-height: 1.5em;
+}
+
+p + ul, p + ol {
+   margin-top: -6px;
+   margin-bottom: 16px;
 }
 em {
     font-style: italic;
