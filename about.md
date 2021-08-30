@@ -5,7 +5,7 @@ title: About
 
 <center>
     <div class="circle">
-        <img src="//s.gravatar.com/avatar/a011b6b54ec2c1852f927b7d0f26318b?s=200" width="80" height="80">
+        <img src="//s.gravatar.com/avatar/a011b6b54ec2c1852f927b7d0f26318b?s=200" width="80" height="80" alt="photo of me seeing on stairs while working">
     </div>
 </center>
 
@@ -29,6 +29,6 @@ About this blog, feel free to check out the source code on <arel="noopener" href
         <li>and for others websites, give a try to: <em>*/boertel</em></li>
     </ul>
 
-    <img class="vi" src="./static/images/written_in_vi.gif">
+    <img class="vi" src="./static/images/written_in_vi.gif" alt="90s' style GIF that says: \"Written in vi\"">
 
 </center>
