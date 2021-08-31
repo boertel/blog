@@ -4,95 +4,129 @@ title: Projects
 ---
 
 <h2>Projects</h2>
-<p>These are my main projects and you can find my others projects on my <a href="https://github.com/boertel" target="_blank">GitHub</a> profile.
+<p>
+  These are my main projects and you can find my others projects on my
+  <a rel="noopener" href="https://github.com/boertel" target="_blank">GitHub</a>
+  profile.
+</p>
 
 <div id="projects"></div>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<svg
+        style="display: none;"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 16px 16px"
+  width="1em"
+  height="1em"
+>
+  <path
+    fill="currentColor"
+    id="github"
+    fill-rule="evenodd"
+    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+  ></path>
+</svg>
+
 <script>
-    function duration(seconds) {
-      let output = [];
-      let remainder = parseInt(seconds, 10);
-      const durations = [
-        // Number of seconds in
-        365 * 24 * 60 * 60, // a year
-        30 * 24 * 60 * 60,  // a month
-        24 * 60 * 60,       // a day
-        60 * 60,            // a hour
-        1 * 60,             // a minute
-      ];
-      durations.forEach((divisor, index) => {
-        const quotient = Math.abs(parseInt(`${remainder / divisor}`, 10))
-        remainder = Math.abs(remainder % divisor)
-        output.push(quotient)
-        if (index === durations.length - 1) {
-          output.push(remainder)
-        }
-      })
-      return output
-    }
+  function duration(seconds) {
+    let output = [];
+    let remainder = parseInt(seconds, 10);
+    const durations = [
+      // Number of seconds in
+      365 * 24 * 60 * 60, // a year
+      30 * 24 * 60 * 60, // a month
+      24 * 60 * 60, // a day
+      60 * 60, // a hour
+      1 * 60, // a minute
+    ];
+    durations.forEach((divisor, index) => {
+      const quotient = Math.abs(parseInt(`${remainder / divisor}`, 10));
+      remainder = Math.abs(remainder % divisor);
+      output.push(quotient);
+      if (index === durations.length - 1) {
+        output.push(remainder);
+      }
+    });
+    return output;
+  }
 
-    const units = ['year', 'month', 'day', 'hour', 'minutes', 'seconds']
+  const units = ["year", "month", "day", "hour", "minutes", "seconds"];
 
-    function populate(projects) {
-        console.log(projects)
-        var $projects = $('#projects');
+  function populate(projects) {
+    console.log(projects);
+    var $projects = document.getElementById("projects");
 
-        projects.forEach(function (project) {
-            project.created_at = new Date(project.created_at);
-            project.pushed_at = new Date(project.pushed_at);
+    projects.forEach(function (project) {
+      const d = duration((new Date() - project.pushed_at) / 1000);
+      const index = d.findIndex((value, index) => d[index] !== 0);
 
-            const d = duration((new Date() - project.pushed_at) / 1000)
-            const index = d.findIndex((value, index) => d[index] !== 0)
+      var options = { year: "numeric", month: "long", day: "numeric" };
+      var container = document.createElement("div");
+      var link = document.createElement("a");
+      link.href = project.homepage;
+      link.title = project.name + " - " + project.language.toLowerCase();
+      link.target = "_blank";
+      link.rel = "noopener";
+      link.innerHTML = project.name;
 
-            var options = { year: 'numeric', month: 'long', day: 'numeric' };
-            var container = $('<div>'),
-                link = $('<a>')
-                    .attr('href', project.homepage)
-                    .attr('title', project.name + ' - ' + project.language.toLowerCase())
-                    .attr('target', '_blank')
-                    .html(project.name),
-                title = $('<h3>'),
-                source = $('<a>')
-                    .css('float', 'right')
-                    .attr('href', project.html_url)
-                    .attr('title', project.name + ' - ' + project.language.toLowerCase())
-                    .attr('target', '_blank'),
-                icon = $('<span>').addClass('octicon octicon-mark-github'),
-                datetime = $('<div>').addClass('date')
-                    .append($('<span>').html(new Intl.DateTimeFormat('default', options).format(project.created_at) + ' '))
-                    .append($('<span>').html(`(last updated: ${d[index]} ${d[index] === 1 ? units[index] : `${units[index]}s`} ago)`))
+      var title = document.createElement("h3");
+      var source = document.createElement("a");
+      source.style.float = "right";
+      source.href = project.html_url;
+      source.title = project.name + " - " + project.language.toLowerCase();
+      source.target = "_blank";
 
-            try {
-                var description = project.description
-                description[0] = description[0].toUpperCase();
-                description = $('<p>').html(description);
+      var icon = document.createElementNS('http://www.w3.org/2000/svg', "svg");
+      icon.viewBox = "0 0 16px 16px";
+      icon.innerHTML = '<use href="#github" />';
 
-                title.append(link)
-                title.append(source.append(icon))
-                container.append(title)
-                container.append(description)
-                container.append(datetime)
+      var datetime = document.createElement("div");
+      datetime.classList.add("date");
 
-                $projects.append(container)
-            } catch {
-                console.warn(`failed to handle ${project.name}`)
-            }
+      var date = document.createElement("span");
+      date.innerHTML =
+        new Intl.DateTimeFormat("default", options).format(project.created_at) +
+        " ";
+
+      var ellapsed = document.createElement("span");
+      ellapsed.innerHTML = `(last updated: ${d[index]} ${
+        d[index] === 1 ? units[index] : `${units[index]}s`
+      } ago)`;
+
+      datetime.appendChild(date);
+      datetime.appendChild(ellapsed);
+
+      try {
+        var description = document.createElement("p");
+        description.innerHTML = project.description;
+
+        title.appendChild(link);
+        source.appendChild(icon);
+        title.appendChild(source);
+        container.appendChild(title);
+        container.appendChild(description);
+        container.appendChild(datetime);
+
+        $projects.appendChild(container);
+      } catch (exception) {
+        console.warn(`failed to handle ${project.name}`, exception);
+      }
+    });
+  }
+
+  fetch("https://api.github.com/users/boertel/repos?per_page=50")
+    .then((response) => response.json())
+    .then(function (data) {
+      projects = data
+        .filter(function (project) {
+          project.created_at = new Date(project.created_at);
+          project.pushed_at = new Date(project.pushed_at);
+          return project.fork === false && !!project.homepage;
+        })
+        .sort(function (a, z) {
+          return z.pushed_at.getTime() - a.pushed_at.getTime();
         });
-    }
 
-    $(document).ready(function () {
-        $.ajax({
-            url: 'https://api.github.com/users/boertel/repos?per_page=50',
-            dataType: 'jsonp',
-            success: function (response) {
-                var data = response.data,
-                    projects = data.filter(function (d) {
-                        return d.fork === false && !!d.homepage;
-                    });
-
-                populate(projects);
-            }
-        });
+      populate(projects);
     });
 </script>

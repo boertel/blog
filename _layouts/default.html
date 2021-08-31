@@ -6,8 +6,8 @@
     <link rel="stylesheet" type="text/css" href="/static/css/reset.css">
     <link rel="stylesheet" type="text/css" href="/static/css/blog.css">
     <link rel="stylesheet" type="text/css" href="/static/css/pygments.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/octicons.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <meta name="description" content="Blog of Benjamin Oertel" />
     <link rel="shortcut icon" href="/favicon.png" type="image/png" />
 </head>
 <body>
@@ -116,8 +116,8 @@
     }
 
     if (window.location.pathname !== '/') {
-        window.onkeydown = function (e) {
-            if (e.which === 27) {
+        window.onkeydown = function (evt) {
+            if (evt.which === 27) {
                 window.location.href = '/';
             }
         };
