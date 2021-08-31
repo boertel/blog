@@ -13,7 +13,7 @@ title: Projects
 <div id="projects"></div>
 
 <svg
-        style="display: none;"
+  style="display: none"
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 16px 16px"
   width="1em"
@@ -76,22 +76,24 @@ title: Projects
       source.title = project.name + " - " + project.language.toLowerCase();
       source.target = "_blank";
 
-      var icon = document.createElementNS('http://www.w3.org/2000/svg', "svg");
-      icon.viewBox = "0 0 16px 16px";
+      var icon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      icon.setAttribute("viewBox", "0 0 16px 16px");
+      icon.setAttribute("width", "1em");
+      icon.setAttribute("height", "1em");
       icon.innerHTML = '<use href="#github" />';
 
       var datetime = document.createElement("div");
       datetime.classList.add("date");
 
-      var date = document.createElement("span");
+      var date = document.createElement("div");
       date.innerHTML =
         new Intl.DateTimeFormat("default", options).format(project.created_at) +
         " ";
 
-      var ellapsed = document.createElement("span");
-      ellapsed.innerHTML = `(last updated: ${d[index]} ${
+      var ellapsed = document.createElement("div");
+      ellapsed.innerHTML = `(last updated: <em>${d[index]} ${
         d[index] === 1 ? units[index] : `${units[index]}s`
-      } ago)`;
+      } ago</em>)`;
 
       datetime.appendChild(date);
       datetime.appendChild(ellapsed);

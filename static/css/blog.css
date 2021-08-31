@@ -251,6 +251,10 @@ center {
   font-family: Monaco, "Courier New", monospace;
   font-size: 14px;
   color: #b3b3b3;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1ch;
 }
 
 table {
@@ -426,12 +430,11 @@ circle.dough {
 circle.chip {
   fill: #6e4901;
 }
-/*
-path {
-    fill: var(--bg) !important;
-    opacity: 0;
+#dough path {
+  fill: var(--bg) !important;
+  opacity: 0;
 }
-*/
+
 .cookie-box {
   position: absolute;
   left: -30px;
