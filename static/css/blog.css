@@ -2,6 +2,7 @@
   --bg: #000;
   --fg: #fff;
   --hg: #dead31;
+  --subtle: #b3b3b3;
   --border: rgba(253, 253, 253, 0.2);
   --sans-font: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
@@ -250,7 +251,7 @@ center {
 .date {
   font-family: Monaco, "Courier New", monospace;
   font-size: 14px;
-  color: #b3b3b3;
+  color: var(--subtle);
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -268,7 +269,7 @@ thead {
 }
 
 .meta p {
-  color: #b3b3b3;
+  color: var(--subtle);
 }
 
 .highlight {
@@ -447,10 +448,38 @@ circle.chip {
   margin-top: 1em;
 }
 
-#projects > div {
-  margin-bottom: 20px;
+.subtle {
+  color: var(--subtle);
 }
 
-#projects p {
-  margin-bottom: 6px;
+.projects {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+.projects li a {
+  display: block;
+  color: var(--fg);
+  text-decoration: none;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 18px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  width: 100%;
+}
+
+.projects li a:hover {
+  border-color: var(--hg);
+}
+
+.projects li h4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  color: var(--hg);
+}
+
+.projects li p {
+  margin-bottom: 0px;
 }

@@ -4,18 +4,14 @@ title: Projects
 ---
 
 <h2>Projects</h2>
-<p>
-  These are my main projects and you can find my others projects on my
-  <a rel="noopener" href="https://github.com/boertel" target="_blank">GitHub</a>
-  profile.
-</p>
+
 
 <div id="projects"></div>
 
 <svg
   style="display: none"
   xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 16px 16px"
+  viewBox="0 0 16 16"
   width="1em"
   height="1em"
 >
@@ -52,43 +48,56 @@ title: Projects
 
   const units = ["year", "month", "day", "hour", "minutes", "seconds"];
 
-  function populate(projects) {
-    console.log(projects);
-    var $projects = document.getElementById("projects");
+  let topics = [
+    { title: "No distractions", topic: "no-distractions" },
+    { title: "Optimization", topic: "optimization" },
+    { title: "Fun", topic: "fun" },
+    { title: "Photography", topic: "photography" },
+    { title: "Utility", topic: "utility" },
+    { title: "Helper Websites", topic: "helper-tool" },
+    { title: "Libraries", topic: "library" },
+  ]
 
+  const $projects = document.getElementById("projects");
+
+  function populate(projects) {
+    topics.forEach(function (topic) {
+      const title = document.createElement("h3")
+      title.innerHTML = topic.title
+      const list = document.createElement("ul")
+      list.classList.add("projects")
+      topic.node = list
+      $projects.appendChild(title)
+      $projects.appendChild(list)
+    })
     projects.forEach(function (project) {
+      const belongsToTopic = topics.find(({ topic }) => project.topics.includes(topic))
+      if (!belongsToTopic) {
+        return
+      }
       const d = duration((new Date() - project.pushed_at) / 1000);
       const index = d.findIndex((value, index) => d[index] !== 0);
 
       var options = { year: "numeric", month: "long", day: "numeric" };
-      var container = document.createElement("div");
-      var link = document.createElement("a");
+
+      const container = document.createElement("li")
+      const link = document.createElement("a")
       link.href = project.homepage;
-      link.title = project.name + " - " + project.language.toLowerCase();
       link.target = "_blank";
-      link.rel = "noopener";
-      link.innerHTML = project.name;
+      link.rel = "noopener"
 
-      var title = document.createElement("h3");
-      var source = document.createElement("a");
-      source.style.float = "right";
-      source.href = project.html_url;
-      source.title = project.name + " - " + project.language.toLowerCase();
-      source.target = "_blank";
+      const title = document.createElement("h4");
+      title.innerHTML = project.name;
 
-      var icon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-      icon.setAttribute("viewBox", "0 0 16px 16px");
-      icon.setAttribute("width", "1em");
-      icon.setAttribute("height", "1em");
-      icon.innerHTML = '<use href="#github" />';
+      const description = document.createElement("p");
+      description.innerHTML = project.description;
 
       var datetime = document.createElement("div");
       datetime.classList.add("date");
+      datetime.style.marginTop = "18px";
 
       var date = document.createElement("div");
-      date.innerHTML =
-        new Intl.DateTimeFormat("default", options).format(project.created_at) +
-        " ";
+      date.innerHTML = `Created on ${new Intl.DateTimeFormat("default", options).format(project.created_at)} `;
 
       var ellapsed = document.createElement("div");
       ellapsed.innerHTML = `(last updated: <em>${d[index]} ${
@@ -99,31 +108,25 @@ title: Projects
       datetime.appendChild(ellapsed);
 
       try {
-        var description = document.createElement("p");
-        description.innerHTML = project.description;
-
-        title.appendChild(link);
-        source.appendChild(icon);
-        title.appendChild(source);
-        container.appendChild(title);
-        container.appendChild(description);
-        container.appendChild(datetime);
-
-        $projects.appendChild(container);
+        container.appendChild(link)
+        link.appendChild(title)
+        link.appendChild(description)
+        link.appendChild(datetime)
+        belongsToTopic.node.appendChild(container);
       } catch (exception) {
         console.warn(`failed to handle ${project.name}`, exception);
       }
     });
   }
 
-  fetch("https://api.github.com/users/boertel/repos?per_page=50")
+  fetch("https://api.github.com/users/boertel/repos?per_page=80")
     .then((response) => response.json())
     .then(function (data) {
       projects = data
         .filter(function (project) {
           project.created_at = new Date(project.created_at);
           project.pushed_at = new Date(project.pushed_at);
-          return project.fork === false && !!project.homepage;
+          return project.fork === false
         })
         .sort(function (a, z) {
           return z.pushed_at.getTime() - a.pushed_at.getTime();
