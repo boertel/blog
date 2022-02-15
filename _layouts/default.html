@@ -70,8 +70,8 @@
         i =  localStorage.getItem('bites') === null ? bites.length - 1 : parseInt(localStorage.getItem('bites'), 10),
         sound = new Audio("/sound/cookie-crunch.ogg");
 
-    function bite(bite) {
-        bite.style.opacity = 1;
+    function bite(_bite) {
+        _bite.style.opacity = 1;
     }
 
     function bake() {
