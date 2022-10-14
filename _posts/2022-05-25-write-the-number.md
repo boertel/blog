@@ -12,7 +12,7 @@ The latest lesson was about numbers. I remember when first moving in the US, und
 I learn best by writing, and writing, and writing again (I'm a visual learning).
 
 <video controls>
-    <source src="/write-the-number/small-write-the-number.mov" type="video/mp4">
+    <source src="/media/write-the-number/small-write-the-number.mov" type="video/mp4">
 </video>
 <br />
 

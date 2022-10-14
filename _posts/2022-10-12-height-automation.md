@@ -14,6 +14,10 @@ Here are the 2 automations I added:
 1. Set `start date` automatically when moving a task from "to do" to "in progress".
 2. Mark a task as "Done" when a PR has been merged into the default branch.
 
+<video controls style="width: 100%; margin: 40px 0">
+    <source src="/media/height-automation/height-automation-start-date.mov" type="video/mp4">
+</video>
+
 You can set up the same automations on Cloudflare worker and even extend to support more by checking out my GitHub repository:
 
 <div class="cta">
