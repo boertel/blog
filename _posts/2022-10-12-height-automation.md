@@ -20,7 +20,7 @@ Here are the 2 automations I added:
 
 You can set up the same automations on Cloudflare worker and even extend to support more by checking out my GitHub repository:
 
-<div class="cta">
+<div class="cta octicon">
     <a href="https://github.com/boertel/height-automation" target="_blank">boertel/height-automation</a>
 </div>
 
