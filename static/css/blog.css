@@ -1,5 +1,5 @@
 :root {
-  --bg: #000;
+  --bg: #171717;
   --fg: #fff;
   --hg: #dead31;
   --subtle: #b3b3b3;
@@ -29,6 +29,8 @@ body {
   min-width: 320px;
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 svg {
