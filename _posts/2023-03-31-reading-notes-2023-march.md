@@ -2,6 +2,7 @@
 layout: post
 title: Reading Notes, March 2023
 permalink: reading-notes-2023-march
+description: Reading notes for March 2023
 tags:
 ---
 
