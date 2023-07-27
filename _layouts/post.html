@@ -3,8 +3,7 @@ layout: default
 ---
 
 <nav>
-  <a href="/" title="Back (ESC)"
-    ><svg
+    <a href="{% if page.categories contains 'articles' %}/{%else %}/{{ page.categories }}{% endif %}"><svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width="1em"
@@ -31,8 +30,7 @@ layout: default
 </article>
 
 <nav>
-  <a href="/" title="Back (ESC)"
-    ><svg
+    <a href="{% if page.categories contains 'articles' %}/{%else %}/{{ page.categories }}{% endif %}"><svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       width="1em"
