@@ -15,22 +15,24 @@ I'm stuck in my paradime of HTTP requests and it is nice to see other approaches
 Feature analytics tracking
 
 1. Segment: a feature is not targeting _all_ users
-2. Tried:
-3. Adopted:
-4. Retained:
-5. Satisfied:
+2. Tried
+3. Adopted
+4. Retained
+5. Satisfied: by surveing users
 
-[Effective standups | Swizec Teller](https://swizec.com/blog/effective-standups/)
+### Article: "[Effective standups](https://swizec.com/blog/effective-standups/)" by Swizec Teller
 
-> Agree on what we want to accomplish today
+> Agree on what we want to accomplish today to define a clear objective
 
-[My Approach to Building Large Technical Projects – Mitchell Hashimoto](https://mitchellh.com/writing/building-large-technical-projects)
+and to not get sidetrack by other priorities or bugs.
 
-- small
-- demo
+### Article: "[My Approach to Building Large Technical Projects](https://mitchellh.com/writing/building-large-technical-projects)" by Mitchell Hashimoto
+
+- find a small problem
+- aim for something demo-able
 - prioritize your own needs
 
-[Some blogging myths](https://jvns.ca/blog/2023/06/05/some-blogging-myths/)
+### Article: "[Some blogging myths](https://jvns.ca/blog/2023/06/05/some-blogging-myths/)"
 
 - myth: you need to be original
 - myth: you need to be an expert
@@ -39,10 +41,10 @@ Feature analytics tracking
 - myth: you need to explain every concept
 - myth: page views matter
 - myth: more material is always better
--
 
-[NSKYC - The average color of the New York sky](https://nskyc.com/)
-Lovely project
+### Article: "[NSKYC - The average color of the New York sky](https://nskyc.com/)"
+
+Lovely project, it makes me want to boot up my raspberry pi and do the same for San Francisco Weather (spoiler, it is mostly gray). But it could be interesting to get people across town to see the difference (Mission 🌞 vs. Sunset ☁️)
 
 ### Podcast: "[Episode 18 — Didier Hilhorst: Mediocre at Best — Full Stack Whatever](https://fullstackwhatever.com/episode/didier-hilhorst-mediocre-at-best)"
 
@@ -60,15 +62,15 @@ Agency works (IDEO)
 
 ### Podcast: "[Episode 19 — Aaron Carambula: Reducing Future Trash — Full Stack Whatever](https://fullstackwhatever.com/episode/aaron-carambula-reducing-future-trash)"
 
-Facebook culture
-
-24:19
+Regarding the evolution of Facebook culture.
 
 > culture of waiting of other people is taking hold.
 
-https://twitter.com/ptr/status/1668662074359312386
+vs. people fixing or building things even if it's their responsabilities.
 
 ### Article: [Stock & Flow - Chris Coyier](https://chriscoyier.net/2023/06/21/stock-flow/)
 
-Stock being good content
-FLow being content to get people on your platform (doesn't mean bad content)
+Restropect on css-tricks content, and the balance between:
+
+- Stock being good content
+- Flow being content to get people on your platform. It doesn't mean bad content but it feeds the beast of following and reporting on the latest (tech) trends consistently.
