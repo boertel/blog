@@ -467,6 +467,9 @@ circle.chip {
   color: var(--subtle);
 }
 
+#projects {
+  margin-top: 20px;
+}
 .projects {
   margin-top: 20px;
   margin-bottom: 60px;

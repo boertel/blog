@@ -5,7 +5,6 @@ title: Projects
 
 <h2>Projects</h2>
 
-
 <div id="projects"><em>Fetching projects from GitHub...</em></div>
 
 <svg
@@ -49,6 +48,7 @@ title: Projects
   const units = ["year", "month", "day", "hour", "minutes", "seconds"];
 
   let topics = [
+    { title: "Predictions", topic: "predictions" },
     { title: "No distractions", topic: "no-distractions" },
     { title: "Built my own", topic: "built-my-own" },
     { title: "Optimization", topic: "optimization" },
@@ -57,63 +57,70 @@ title: Projects
     { title: "Utility", topic: "utility" },
     { title: "Helper Websites", topic: "helper-tool" },
     { title: "Libraries", topic: "library" },
-  ]
+  ];
 
   const $projects = document.getElementById("projects");
 
   function populate(projects) {
-    $projects.innerHTML = ''
+    $projects.innerHTML = "";
     topics.forEach(function (topic) {
-      const title = document.createElement("h3")
-      title.innerHTML = topic.title
-      const list = document.createElement("ul")
-      list.classList.add("projects")
-      topic.node = list
-      $projects.appendChild(title)
-      $projects.appendChild(list)
-    })
+      const title = document.createElement("h3");
+      title.innerHTML = topic.title;
+      const list = document.createElement("ul");
+      list.classList.add("projects");
+      topic.node = list;
+      $projects.appendChild(title);
+      $projects.appendChild(list);
+    });
     projects.forEach(function (project) {
-      const belongsToTopic = topics.find(({ topic }) => project.topics.includes(topic))
-      if (!belongsToTopic) {
-        return
-      }
-      const d = duration((new Date() - project.pushed_at) / 1000);
-      const index = d.findIndex((value, index) => d[index] !== 0);
-
-      var options = { year: "numeric", month: "long", day: "numeric" };
-
-      const container = document.createElement("li")
-      const link = document.createElement("a")
-      link.href = project.homepage;
-      link.target = "_blank";
-      link.rel = "noopener"
-
-      const title = document.createElement("h4");
-      title.innerHTML = project.name;
-
-      const description = document.createElement("p");
-      description.innerHTML = project.description;
-
-      var datetime = document.createElement("div");
-      datetime.classList.add("date");
-      datetime.style.marginTop = "18px";
-
-      var date = document.createElement("div");
-      date.innerHTML = `Created on ${new Intl.DateTimeFormat("default", options).format(project.created_at)} `;
-
-      var ellapsed = document.createElement("div");
-      ellapsed.innerHTML = `(last updated: <em>${d[index]} ${
-        d[index] === 1 ? units[index] : `${units[index]}s`
-      } ago</em>)`;
-
-      datetime.appendChild(date);
-      datetime.appendChild(ellapsed);
-
       try {
-        container.appendChild(link)
-        link.appendChild(title)
-        link.appendChild(description)
-        link.appendChild(datetime)
+        const belongsToTopic = topics.find(({ topic }) =>
+          project.topics.includes(topic)
+        );
+        if (!belongsToTopic) {
+          return;
+        }
+        var options = { year: "numeric", month: "long", day: "numeric" };
+
+        const container = document.createElement("li");
+        const link = document.createElement("a");
+        link.href = project.homepage;
+        link.target = "_blank";
+        link.rel = "noopener";
+
+        const title = document.createElement("h4");
+        title.innerHTML = project.name;
+
+        const description = document.createElement("p");
+        description.innerHTML = project.description;
+
+        var datetime = document.createElement("div");
+        datetime.classList.add("date");
+        datetime.style.marginTop = "18px";
+
+        var date = document.createElement("div");
+        date.innerHTML = `Created on ${new Intl.DateTimeFormat(
+          "default",
+          options
+        ).format(project.created_at)} `;
+
+        if (project.pushed_at) {
+          const d = duration((new Date() - project.pushed_at) / 1000);
+          const index = d.findIndex((value, index) => d[index] !== 0);
+
+          var ellapsed = document.createElement("div");
+          ellapsed.innerHTML = `(last updated: <em>${d[index]} ${
+            d[index] === 1 ? units[index] : `${units[index]}s`
+          } ago</em>)`;
+          datetime.appendChild(ellapsed);
+        }
+
+        datetime.appendChild(date);
+
+        container.appendChild(link);
+        link.appendChild(title);
+        link.appendChild(description);
+        link.appendChild(datetime);
         belongsToTopic.node.appendChild(container);
       } catch (exception) {
         console.warn(`failed to handle ${project.name}`, exception);
@@ -124,15 +131,48 @@ title: Projects
   fetch("https://api.github.com/users/boertel/repos?per_page=80")
     .then((response) => response.json())
     .then(function (data) {
-      projects = data
-        .filter(function (project) {
-          project.created_at = new Date(project.created_at);
-          project.pushed_at = new Date(project.pushed_at);
-          return project.fork === false
-        })
-        .sort(function (a, z) {
-          return z.pushed_at.getTime() - a.pushed_at.getTime();
-        });
+      let projects = [
+        {
+          topics: ["built-my-own"],
+          name: "Alternette",
+          description: "RSS feed reader",
+          homepage: "/rss-reader",
+          created_at: new Date("2018-05-19"),
+        },
+          {
+          topics: ["predictions"],
+          name: "Psykick",
+          description: "Sport predictions website. Predict outcomes of matches, gain points and beat your friends. Started with Euro 2012, and continued for all major tournaments since. I'm at my third rewrites of the app.",
+          homepage: "https://psykick.app",
+          created_at: new Date("2012-05-21"),
+        },
+          {
+          topics: ["predictions"],
+          name: "Middle of the Pack",
+          description: "Formula 1 predictions website.",
+          homepage: "https://motp.oertel.fr",
+          created_at: new Date("2022-02-22"),
+        },
+          {
+          topics: ["predictions"],
+          name: "Big Brother Gaius",
+          description: "Baby pool, guess baby features for fun and pride.",
+          homepage: "https://bigbrothergaius.com",
+          created_at: new Date("2023-05-19"),
+        },
+
+      ];
+      projects = projects.concat(
+        data
+          .filter(function (project) {
+            project.created_at = new Date(project.created_at);
+            project.pushed_at = new Date(project.pushed_at);
+            return project.fork === false;
+          })
+          .sort(function (a, z) {
+            return z.pushed_at.getTime() - a.pushed_at.getTime();
+          })
+      );
 
       populate(projects);
     });
