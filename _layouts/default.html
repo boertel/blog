@@ -16,7 +16,7 @@
 <body>
 
 <div class="sidebar clearfix">
-    <div id="cookie-box" class="cookie-box">
+    <div id="easter-egg-box" class="easter-egg-box">
     <svg id="dough" width="200" height="200">
     <circle r="100" cx="100" cy="100" class="dough" />
     <circle class="chip" r="20" cx="120" cy="120" />
@@ -70,7 +70,7 @@
     // Cookie
     var bites = Array.prototype.slice.call(document.getElementsByTagName("path")),
         dough = document.getElementById("dough"),
-        box = document.getElementById("cookie-box"),
+        box = document.getElementById("easter-egg-box"),
         i =  localStorage.getItem('bites') === null ? bites.length - 1 : parseInt(localStorage.getItem('bites'), 10),
         sound = new Audio("/sound/cookie-crunch.ogg");
 

@@ -404,7 +404,7 @@ span.desktop {
     margin-left: 115px;
     float: right;
   }
-  .cookie-box {
+  .easter-egg-box {
     left: -80px !important;
   }
   .sidebar div.meta h1 {
@@ -451,7 +451,7 @@ circle.chip {
   opacity: 0;
 }
 
-.cookie-box {
+.easter-egg-box {
   position: absolute;
   left: -30px;
   top: -30px;
