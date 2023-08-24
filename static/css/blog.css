@@ -384,7 +384,7 @@ span.desktop {
 @media (max-width: 760px) {
   .desktop,
   span.desktop {
-    display: none;
+    display: none !important;
   }
   .mobile {
     display: block;
