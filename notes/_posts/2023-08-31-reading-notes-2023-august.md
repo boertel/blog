@@ -23,3 +23,13 @@ Your users will be using the app no matter what if you solve a (difficult) probl
 > Of course, in order to see Europe as palaces and museums and cathedrals, you have to drag out a huge mental eraser. You have to scrub away most of what Europe actually looks like. If you’re a visitor, you have to forget the airport where you arrived. You have to ignore the ugly freeway you drove on, the bland apartment blocks you passed, on the way to your modern hotel. And if you decide to stay longer, to make a life here, you have to press delete on the nasty politicians and the social tensions, the traffic and the hideous sprawl, that are as much a part of life here as they are anywhere else.
 
 > To come abroad is to understand yourself as a product of your own culture, and to see just how specific that culture is. So much of what I thought of as my personality — whatever made me different from other people — turned out to pale in comparison with what made me similar to other people, especially other Americans.
+
+[Do I need a consultant, contractor or employee? - Jacob Kaplan-Moss](https://jacobian.org/2023/aug/24/consultant-contractor-or-employee/)
+Consider myself in between consultant and contractor
+
+[Timo Kuilder](https://timokuilder.com/)
+![](https://freight.cargo.site/w/600/q/94/i/13634ce049caf2e3183cf1086b04b2d09fcf66e922e587a951dd0fa8edd35108/office-wildlifde-timokuilder.jpg)
+
+[Magoz](https://magoz.com/)
+![](https://magoz.com/_next/image?url=%2Fp%2Fmagoz-enlightenment-reading-poster-print-shop-illustration.jpg&w=3840&q=100)
+https://magoz.com/enlightenment-print
