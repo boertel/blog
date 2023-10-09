@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Don't ask for my password when I am at home
+title: Don\'t ask for my password when I am at home
 permalink: safe-at-home
 tags: bash wifi script
 ---

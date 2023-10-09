@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Upgrade latest npm packages
+permalink: upgrade-latest-npm-packages
 date: 2023-07-27 12:16 -0700
 tags: cli
 ---

@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/static/css/pygments.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     {% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}
+    {% if page.permalink %}<meta content="https://ben.oertel.fr/og/{{ page.permalink }}.png" property="og:image">{% endif %}
     <link rel="shortcut icon" href="/favicon.png" type="image/png" />
     <link rel="alternate" type="application/rss+xml" title="Ben Oertel" href="/feed.xml" />
     <link rel="me" href="https://github.com/boertel" />
