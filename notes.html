@@ -13,7 +13,7 @@ title: Notes
             <a href="{{ post.url }}" tabindex="{{ forloop.index }}">{{ post.title }}</a>
         </h2>
         <div class="date">
-            <span title="{{ post.date | date: '%B %d, %Y' }}">{{ post.date | date: "%B %Y" }}</span>
+            <span title="{{ post.date | date: '%B %d, %Y' }}">{{ post.date | date: "%B %d, %Y" }}</span>
         </div>
     </article>
 {% endfor %}
