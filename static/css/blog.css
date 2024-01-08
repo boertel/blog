@@ -407,13 +407,15 @@ span.desktop {
     max-width: 150px;
   }
   .sidebar div.meta .nav li {
+    overflow: auto;
     display: inline;
   }
   .sidebar div.meta .nav {
     margin-right: -10px;
   }
   .sidebar div.meta .nav li a {
-    padding: 0 10px;
+    display: inline-block;
+    padding: 4px 10px;
   }
   .sidebar .meta p {
     margin-bottom: 5px;
