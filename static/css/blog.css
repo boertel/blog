@@ -10,7 +10,7 @@
   :root {
     --fg: #000;
     --bg: #fff;
-    --hg: #3b7fd8;
+    --hg: rgb(30, 89, 159);
     --border: #e3e3e3;
     --subtle: rgb(89, 89, 89);
   }
@@ -354,6 +354,9 @@ nav {
 article {
   padding-top: 20px;
   margin: 0 auto 20px auto;
+}
+.post a {
+  text-decoration: underline;
 }
 
 .circle img {
