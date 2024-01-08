@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="/static/css/blog.css">
     <link rel="stylesheet" type="text/css" href="/static/css/pygments.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-    {% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}
+    {% if page.description %}<meta name="description" content="{{ page.description }}" />{% else %}<meta name="description" content="Talking about tech and what I encounter on the Web." />{% endif %}
     {% if page.permalink %}<meta content="{{ site.url }}/og/{{ page.permalink }}.png" property="og:image">{% endif %}
     <link rel="shortcut icon" href="/favicon.png" type="image/png" />
     <link rel="alternate" type="application/rss+xml" title="Ben Oertel" href="/feed.xml" />

@@ -322,11 +322,6 @@ thead {
   line-height: 38px;
   text-align: right;
 }
-.sideba.sidebar .nav {
-  position: relative;
-  max-width: 370px;
-  float: right;
-}
 
 section {
   margin-left: 230px;
@@ -413,7 +408,12 @@ span.desktop {
   }
   .sidebar div.meta .nav li {
     display: inline;
-    margin-left: 20px;
+  }
+  .sidebar div.meta .nav {
+    margin-right: -10px;
+  }
+  .sidebar div.meta .nav li a {
+    padding: 0 10px;
   }
   .sidebar .meta p {
     margin-bottom: 5px;
