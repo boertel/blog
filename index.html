@@ -4,15 +4,6 @@ title: blog
 ---
 
 
-{% for post in site.categories.articles %}
-    <article class="">
-        <h2>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-        </h2>
-        <div class="date">
-            <span title="{{ post.date | date: '%B %d, %Y' }}">{{ post.date | date: "%B %Y" }}</span>
-        </div>
-    </article>
-{% endfor %}
-
-<article class="subtle">Thanks for visiting my personal website.</article>
+<div class="intro">
+    <p><a href="/about">I</a> enjoy making <a href="/projects">stuff</a>.</p>
+</div>

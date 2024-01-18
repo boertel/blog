@@ -105,7 +105,7 @@ How to balance writing code and thinking. Too much of one or the other can be ha
 > - Spending too much time thinking and planning ahead of time can be just as bad as not spending enough; how does one know when to stop thinking and start doing?
 >   One approach that I like to use personally is to identify what I think of as the core concepts that underlie the problem at hand. Most problems can be decomposed into constituent ideas that are more or less independent from one another.
 
-### Article: "[https://swizec.com/blog/how-to-go-from-senior-to-lead/]"
+### Article: "[How to go from Senior to Lead](https://swizec.com/blog/how-to-go-from-senior-to-lead/])"
 
 A pick of a few things that a lead should do:
 

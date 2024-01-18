@@ -16,6 +16,10 @@
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body,
 html {
   height: 100%;
@@ -178,6 +182,13 @@ code {
   height: 0;
 }
 
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
 pre {
   margin: 15px 0;
   text-align: left;
@@ -329,7 +340,6 @@ section {
   min-height: 100%;
   border-left: 1px solid var(--border);
   max-width: 1280px;
-  padding-bottom: 20px;
 }
 
 header {
