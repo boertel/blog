@@ -1,4 +1,6 @@
 highlighter: rouge
+plugins:
+    - jekyll-redirect-from
 site.name: boertel
 navigation:
   posts:
