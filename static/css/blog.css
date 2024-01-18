@@ -327,6 +327,10 @@ thead {
   margin: 0;
   padding: 0;
 }
+
+.nav a.active {
+  text-decoration: underline;
+}
 .sidebar div.meta h1 {
   float: right;
   max-width: 195px;

@@ -52,11 +52,15 @@
             </li>
         </ul>
         <ul class="nav">
-            <li><a href="/articles/">Articles</a></li>
-            <li><a href="/notes/">Notes</a></li>
+            {% assign url = page.url|remove:'.html' %}
+            {% for link in site.navigation.posts %}
+                <li><a href="{{link.url}}" {% if url == link.url %}class="active"{% endif %}>{{link.text}}</a></li>
+            {% endfor %}
             <li class="desktop">&nbsp;</>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/about">About</a></li>
+
+            {% for link in site.navigation.others %}
+                <li><a href="{{link.url}}" {% if url == link.url %}class="active"{% endif %}>{{link.text}}</a></li>
+            {% endfor %}
 		    <li><a rel="noopener" href="https://resume.oertel.fr">Résumé</a></li>
         </ul>
     </div>

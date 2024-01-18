@@ -1,2 +1,13 @@
 highlighter: rouge
 site.name: boertel
+navigation:
+  posts:
+    - text: Articles
+      url: /articles/
+    - text: Notes
+      url: /notes/
+  others:
+    - text: Projects
+      url: /projects
+    - text: About
+      url: /about
