@@ -6,4 +6,20 @@ title: blog
 
 <div class="intro">
     <p><a href="/about">I'm</a> a software engineer that enjoy making <a href="/projects">stuff</a>.</p>
+
+    <ul>
+    {% for post in site.categories.articles limit:5 %}
+    <li>
+        <a href="{{ post.url }}">
+            {{ post.title}}
+        </a>
+        &nbsp;
+        <span class="date" title="{{ post.date | date: '%B %d, %Y' }}">
+            –
+            {{ post.date | date: "%B %d, %Y" }}
+        </span>
+    </li>
+    {% endfor %}
+    <li><a href="/articles/">&rarr; more articles...</a></li>
+    </ul>
 </div>

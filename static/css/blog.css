@@ -184,10 +184,21 @@ code {
 
 .intro {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
   height: 100vh;
   padding: 0 20px;
+  margin: 0 auto;
+  max-width: 520px;
+}
+
+.intro p {
+  margin-bottom: 4em;
+}
+
+.intro .date {
+  font-size: 0.9em;
+  display: inline;
 }
 
 pre {
@@ -281,7 +292,7 @@ center {
   font-size: 14px;
   color: var(--subtle);
   width: 100%;
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   column-gap: 1ch;
 }
