@@ -16,6 +16,12 @@ I'm a software engineer using vim, git and some weird commands on a <span style=
 About this blog, feel free to check out the source code on <a rel="noopener" href="//github.com/boertel/blog" target="_blank">GitHub</a>, you can even report issues and pull requests if you want to fix/improve/criticize it.
 
 <center>
+<a href="/feed.xml">
+<img style="vertical-align: text-bottom;" src="./static/images/rss.svg" height="20px" width="20px" /> Follow my RSS feed
+</a>
+</center>
+
+<center>
     <h2 style="text-align: center">Find me</h2>
     <ul>
         <li><a rel="noopener" href="mailto:benjamin.oertel@gmail.com" target="_blank">benjamin.oertel@gmail.com</a></li>
