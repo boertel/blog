@@ -26,8 +26,8 @@ About this blog, feel free to check out the source code on <a rel="noopener" hre
     <ul>
         <li><a rel="noopener" href="mailto:benjamin.oertel@gmail.com" target="_blank">benjamin.oertel@gmail.com</a></li>
         <li><a rel="noopener" href="https://github.com/boertel" target="_blank">GitHub</a></li>
-        <li><a rel="noopener" href="https://mastodon.social/@boertel" target="_blank">boertel@mastodon.social</a></li>
-        <li><a rel="noopener" href="https://twitter.com/boertel" target="_blank">Twitter</a></li>
+        <li><a rel="noopener" href="https://bsky.app/profile/ben.oertel.fr" target="_blank">Bluesky</a></li>
+        <li><a rel="noopener" href="https://mastodon.social/@boertel" target="_blank">Mastodon</a></li>
         <li><a rel="noopener" href="https://strava.com/athletes/boertel" target="_blank">Strava</a></li>
         <li><a rel="noopener" href="https://instagram.com/boertel" target="_blank">Instagram</a></li>
         <li><a rel="noopener" href="https://linkedin.com/in/boertel" target="_blank">LinkedIn</a></li>
