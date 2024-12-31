@@ -22,4 +22,4 @@ Some interesting things I came across were:
 - French numbers are complicated (who would have guessed?) A lot of websites references the "traditional" way whereas a reform from 2020 tries to make more homogeneous. More [Nombres en français, Orthographe de 1990](https://fr.wikipedia.org/wiki/Nombres_en_fran%C3%A7ais#Orthographe_de_1990)
 - It can be a good question to ask for interviews
 
-Go learn how to spell numbers in Spanish (or French) [number.oertel.fr](https://number.oertel.fr)
+Go learn how to spell numbers in Spanish (or French) [write-the-number.boertel.workers.dev](https://write-the-number.boertel.workers.dev/)
