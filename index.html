@@ -3,23 +3,69 @@ layout: default
 title: blog
 ---
 
-
 <div class="intro">
-    <p><a href="/about">I'm</a> a software engineer that enjoy making <a href="/projects">stuff</a>.</p>
+    <h2 style="font-size: 1.4em">I enjoy solving my problems with software.</h2>
 
-    <ul>
-    {% for post in site.categories.articles limit:5 %}
-    <li>
-        <a href="{{ post.url }}">
-            {{ post.title}}
-        </a>
-        &nbsp;
-        <span class="date" title="{{ post.date | date: '%B %d, %Y' }}">
-            –
-            {{ post.date | date: "%B %d, %Y" }}
-        </span>
-    </li>
-    {% endfor %}
-    <li><a href="/articles/">&rarr; more articles...</a></li>
-    </ul>
+    <div style="display: flex; flex-direction: column; gap: 0.1em">
+        <h4 style="display: flex; align-items: center; gap: 0.8em">
+            <div style="flex-shrink: 0">Last articles</div>
+            <hr
+                style="
+                    width: 100%;
+                    border-left: 0;
+                    border-right: 0;
+                    border-bottom: 0;
+                    border-color: var(--subtle);
+                "
+            />
+        </h4>
+        <ul>
+            {% for post in site.categories.articles limit:5 %}
+            <li>
+                <a href="{{ post.url }}"> {{ post.title}} </a>
+                &nbsp;
+                <span class="date" title="{{ post.date | date: '%B %d, %Y' }}">
+                    – {{ post.date | date: "%B %d, %Y" }}
+                </span>
+            </li>
+            {% endfor %}
+      <li><a href="/articles/">&rarr;<span style="color: rgba(var(--fg), 0.8);"> more articles...</span></a></li>
+        </ul>
+    </div>
+
+    <!--div style="display: flex; flex-direction: column; gap: 0.1em">
+        <h4 style="display: flex; align-items: center; gap: 0.8em">
+            <div style="flex-shrink: 0">Projects</div>
+            <hr
+                style="
+                    width: 100%;
+                    border-left: 0;
+                    border-right: 0;
+                    border-bottom: 0;
+                    border-color: var(--subtle);
+                "
+            />
+        </h4>
+        <ul style="">
+            {% assign pinned_projects = site.categories.projects | where:
+            "tags", "pinned" %} {% for project in pinned_projects %}
+            <li style="">
+              <a href="{{ project.url }}">{{ project.title }}</a>: {{ project.description }}
+            </li>
+            {%endfor %}
+            <li><a href="/projects/">&rarr; more projects...</a></li>
+        </ul>
+    </div-->
+
+
+    <div
+        style="
+            margin-top: 2em;
+            background-color: rgba(var(--fg), 0.2);
+            border-radius: 6px;
+            padding: 4px 12px;
+        "
+    >
+        You can subscribe to this blog <a href="/feed.xml">via RSS</a>.
+    </div>
 </div>
